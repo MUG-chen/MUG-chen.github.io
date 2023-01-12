@@ -4,8 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="浅谈《阿凡达2：水之道》, MUG-chen&#39;s Blog">
-    <meta name="description" content="对《阿凡达2：水之道》，观影过后的一些体验">
+    <meta name="keywords" content="C语言程序设计-Chap.3, MUG-chen&#39;s Blog">
+    <meta name="description" content="程序控制结构1. 三种基本结构
+顺序结构
+选择结构
+循环结构
+
+2. 关系，逻辑，条件的相关语句关系运算符六个： &amp;lt; &amp;lt;&amp;#x3D; &amp;#x3D;&amp;#x3D; &amp;gt; &amp;gt;&amp;#x3D;注：在C语言中，&amp;#x3D;&amp;#x3D">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>浅谈《阿凡达2：水之道》 | MUG-chen&#39;s Blog</title>
+    <title>C语言程序设计-Chap.3 | MUG-chen&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -297,12 +302,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">浅谈《阿凡达2：水之道》</h1>
+                    <h1 class="description center-align post-title">C语言程序设计-Chap.3</h1>
                 </div>
             </div>
         </div>
@@ -334,8 +339,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/comment/" class="post-category">
-                                comment
+                            <a href="/categories/Study-Notes/" class="post-category">
+                                Study Notes
                             </a>
                         
                     </div>
@@ -347,7 +352,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-01-05
+                    2023-01-10
                 </div>
                 
 
@@ -371,43 +376,131 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><em>阅前提醒：本片博文是在博主仅仅对阿凡达1的剧情略知一二的情形下的观影体验，文章中的观点难免有失偏颇，仅代表个人看法</em></p>
-<blockquote>
-<p><strong>阿凡达2：一部“徒有其表”的科幻作品</strong></p>
-</blockquote>
-<h2 id="剧情梗概"><a href="#剧情梗概" class="headerlink" title="剧情梗概"></a>剧情梗概</h2><blockquote>
-<p>博主的梗概极其简略，肯定无法将电影中的细节进行呈现，这里还请读者有兴趣的话自行观看</p>
-</blockquote>
-<p>阿凡达2采用了一个非常“合家欢”的剧本</p>
-<p>几个基本设定：  </p>
-<ol>
-<li>故事发生的星球叫做：潘多拉星</li>
-<li>该星球上存在着名为“纳美”的原始土著</li>
-<li>纳美人与潘多拉星的自然环境有着一种天然的“联系”，能使他们免遭人类的追捕</li>
-<li>人类通过将自己的记忆转移至阿凡达体内，可以防止自己被潘多拉星的自然环境所针对</li>
+                <h1 id="程序控制结构"><a href="#程序控制结构" class="headerlink" title="程序控制结构"></a>程序控制结构</h1><h2 id="1-三种基本结构"><a href="#1-三种基本结构" class="headerlink" title="1. 三种基本结构"></a>1. 三种基本结构</h2><ol>
+<li>顺序结构</li>
+<li>选择结构</li>
+<li>循环结构</li>
 </ol>
-<p>本作剧情：<br>男主在变为纳美族后，了解到人类要取自己性命，为了不拖累自己的森林部族，便主动禅让，并与其家人一同离开森林部族，前往海洋部族，寻求其庇护。<br>在海洋部族的时段，男主学习了海洋部族的各类技能，但仍旧无法逃过人类的追捕，自己的孩子以及海洋部族首领的孩子均被人类所绑架，以此要挟男主主动投降。<br>最终男主在海洋部族及自然的帮助下，击退了前来追杀自己的人类队伍。</p>
-<p>对，在我的眼中这部电影中真正可以说是 <strong>剧情相关</strong> 的部分就这么多，但就是这些内容，居然能拍了长达 <strong>三小时</strong> ？！</p>
-<h2 id="一些亮点"><a href="#一些亮点" class="headerlink" title="一些亮点"></a>一些亮点</h2><p>咱先谈谈这部电影哪里好</p>
-<h3 id="画面，音乐，特效"><a href="#画面，音乐，特效" class="headerlink" title="画面，音乐，特效"></a>画面，音乐，特效</h3><p>可以承认的是，这部电影在这些基础层面，可以说的上是好好学生了，这一系列的基本功打的极其扎实。画面上，很干净，很透亮，对于一部“水战”的主题电影，这是一个很好的加分项；音乐上，至少头一次看，不会有很大的违和感，该起该落，情感把控都还算可以；特效上，阿凡达1就是凭这个打出名声的，不多赘述</p>
-<h3 id="运镜！"><a href="#运镜！" class="headerlink" title="运镜！"></a>运镜！</h3><p>这点我一定得夸一下，这部电影的运镜节奏非常合适，它不会像某些科幻片一样让你感觉到一种“看不过来”的感觉，也不会显得过于拖沓，这带来的观影效果提升确实很明显</p>
-<h2 id="吐槽-（正片开始）"><a href="#吐槽-（正片开始）" class="headerlink" title="吐槽 （正片开始）"></a>吐槽 <del>（正片开始）</del></h2><p>好了，该夸的夸完了，现在该骂一骂了</p>
-<h3 id="剧本"><a href="#剧本" class="headerlink" title="剧本"></a>剧本</h3><p>首先从我认为最无法理解的地方说起<br>2022年的 <strong>“科幻巨制”</strong> ，却给我看出了一股子儿女情长，并肩加上一些环境保护的“陈词滥调”，我觉得多少有些无聊了吧</p>
-<p>我可以接受电影以“家庭”，“环境”为主旨，但我不认可为了这所谓的主旨而把剧情的合理性抛之脑后的做法</p>
-<p>我认为本作的不合理处包括并不限于：</p>
+<h2 id="2-关系，逻辑，条件的相关语句"><a href="#2-关系，逻辑，条件的相关语句" class="headerlink" title="2. 关系，逻辑，条件的相关语句"></a>2. 关系，逻辑，条件的相关语句</h2><h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><p>六个： <strong>&lt; &lt;&#x3D; &#x3D;&#x3D; &gt; &gt;&#x3D;</strong><br><strong>注：在C语言中，&#x3D;&#x3D;表示相等，&#x3D;表示赋值，勿混淆</strong></p>
+<h3 id="关系表达式"><a href="#关系表达式" class="headerlink" title="关系表达式"></a>关系表达式</h3><p>在C语言中，用 <strong>1</strong> 表示表达式为真，用 <strong>0</strong> 表示表达式为假<br>如：  </p>
 <ol>
-<li>男主明知 <em>人类想要掠夺整个潘多拉星，他自己仅仅是个导火索</em> 的事实，却仍然选择逃窜到另一个部族</li>
-<li>在人类已然找上门时，男主仍在坚守自己“忍一时风平浪静”的岁月静好思想</li>
-<li>在男主终于打算前往一战时，海洋部族仅仅是开场露了个面，此后便在整场决战中 <strong>“销声匿迹”</strong> 了</li>
+<li>表达式： <strong>8&gt;4</strong> 为真，值为1</li>
+<li>表达式： <strong>0&#x3D;&#x3D;1</strong> 为假，值为0</li>
 </ol>
-<h3 id="节奏"><a href="#节奏" class="headerlink" title="节奏"></a>节奏</h3><p>其次，说说这个剧情带来的副作用——整个影片的剧情发展拖沓的令人发指</p>
-<p>不同于此前所提及的“运镜”相关的节奏恰当，本片的剧情进展十分缓慢，依我看来，这部电影的主线完全可以在2小时内结束，能拖到3小时的原因在于影片中存在许多“不必要”的铺垫</p>
-<h3 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h3><p>很多细节上的处理完全为主线服务，而完全忽视了与背景的契合度</p>
-<p>在此略举几例：<br>在太空时代，科技领先潘多拉星多少倍的人类，时至如今，其飞行器的前窗仍然能被纳美人一箭射穿。<br>以及科技如此发达的人类社会，在绑架男主几个孩子时，“固执”地使用 <strong>皮带</strong> 将几个孩子拷在船上，在男主初次成功救出部分人质后，仍然“执拗”地使用 <em><strong>皮带</strong></em> 将剩余人质拷在船上。 <del>（好家伙你搁这玩梅开二度呢？）</del></p>
-<p>无力吐槽。。。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>阿凡达2的基础是好的，甚至可以说是杰出的，但抵不过剧情，细节上的硬伤带来的观感下降</p>
-<p>如果奔着画面和特效所带来的震撼，可以尝试<br>如果奔着剧情去，大可不必了</p>
-<p>本篇博文就到这里</p>
+<p>这里引入一种语句： <strong>条件运算符</strong><br>写为：？：<br>如：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> x<span class="token punctuation">;</span>
+<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d %d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">,</span> <span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+x <span class="token operator">=</span> a <span class="token operator">></span> b <span class="token operator">?</span> a <span class="token operator">:</span> b<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>上述语句表示：<br>若a&gt;b，则x&#x3D;a，反之，则x&#x3D;b</p>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>三个： <strong>! &amp;&amp; ||</strong><br>分别表示：非，与，或</p>
+<h3 id="逻辑表达式"><a href="#逻辑表达式" class="headerlink" title="逻辑表达式"></a>逻辑表达式</h3><p>对于 ! 表达式，会对该表达式求值，以该值的否定为结果<br>对于 &amp;&amp; 表达式，会对两侧表达式分别求值，只有两侧表达式值均为1时，整个表达式值才为1，否则均为0<br>对于 || 表达式，会对两侧表达式分别求值，只有两侧表达式值均为0时，整个表达式值才为0，否则均为1</p>
+<h3 id="短路特性（重点关注）"><a href="#短路特性（重点关注）" class="headerlink" title="短路特性（重点关注）"></a>短路特性（重点关注）</h3><p>逻辑表达式求值时，只有系统判定必须计算下一个运算符才能得出表达式的值时，才会进行计算 <del>（多绕的慌啊）</del></p>
+<p>举个例子：  </p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> x<span class="token punctuation">;</span>
+<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d %d %d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">,</span> <span class="token operator">&amp;</span>b<span class="token punctuation">,</span> <span class="token operator">&amp;</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+x <span class="token operator">=</span> a <span class="token operator">&amp;&amp;</span> b <span class="token operator">&amp;&amp;</span> c<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>当上述例子输入时，第一个数值（即a的值）输入0时，则不会计算b &amp;&amp; c这一部分的值，而会直接将x的值赋值为0</p>
+<h2 id="3-顺序结构程序设计"><a href="#3-顺序结构程序设计" class="headerlink" title="3. 顺序结构程序设计"></a>3. 顺序结构程序设计</h2><p><em><strong>自上而下，逐行运行</strong></em></p>
+<p>主要由以下部分组成：</p>
+<ol>
+<li>赋值语句</li>
+<li>复合语句</li>
+<li>函数调用语句</li>
+</ol>
+<p><em>赋值，函数调用在前面的章节已经有过叙述，这里仅对复合语句做简要说明</em></p>
+<p>复合语句指一组语句，可以由 <strong>{}</strong> 框在中间</p>
+<h2 id="4-选择结构程序设计"><a href="#4-选择结构程序设计" class="headerlink" title="4. 选择结构程序设计"></a>4. 选择结构程序设计</h2><p>选择结构需要利用此前的关系，逻辑表达式来阐述条件</p>
+<p>两种常用语句： <strong>if ; switch</strong></p>
+<h3 id="if-语句"><a href="#if-语句" class="headerlink" title="if 语句"></a>if 语句</h3><p>有三种形式：  </p>
+<ol>
+<li>if：条件成立后执行</li>
+<li>if-else：条件成立则执行if后的语句，反之则执行else后的语句</li>
+<li>else-if：用于增加if-else中的条件个数</li>
+</ol>
+<p>最完备的一种情况：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">if</span><span class="token punctuation">(</span>条件<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    表达式<span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>条件<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    表达式<span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">else</span><span class="token punctuation">(</span>条件n<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    表达式n<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="switch-语句"><a href="#switch-语句" class="headerlink" title="switch 语句"></a>switch 语句</h3><p><em>用于实现多分支选择结构</em></p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">switch</span><span class="token punctuation">(</span>variable<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">case</span> E1<span class="token operator">:</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> E2<span class="token operator">:</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>简而言之，通过对variable（即变量）的值进行判断从而决定要执行的语句<br>当variable&#x3D;&#x3D;E1时，执行case E1中的语句<br>后续同理<br>如果variable的值不等于其中的任意一个case，则执行default中的语句</p>
+<p><strong>注</strong>：  </p>
+<ol>
+<li>执行语句时，只有遇到 <strong>break</strong> 或 <strong>}</strong> 才会终止，故这里推荐在每一个case后均加上break</li>
+<li>default并不是必须的，如果不加default，则variable不符合要求时不会执行任何语句</li>
+<li>variable不仅仅可以是数值，也可以是字符形式</li>
+</ol>
+<h2 id="5-循环程序结构设计"><a href="#5-循环程序结构设计" class="headerlink" title="5. 循环程序结构设计"></a>5. 循环程序结构设计</h2><p>与选择结构类似地，同样需要利用关系、逻辑表达式进行条件的阐述</p>
+<p>常用语句： <strong>while ; for ; do-while</strong></p>
+<h3 id="while-语句"><a href="#while-语句" class="headerlink" title="while 语句"></a>while 语句</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">while</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>即：当condition为真（即condition非零）时，执行while内语句，执行完毕后重新判断condition，直至condition为假</p>
+<p><strong>注</strong>：<br>当执行语句时遇到诸如 <strong>break ; return ; goto</strong> 之类的语句时，会跳出while循环</p>
+<h3 id="for-语句"><a href="#for-语句" class="headerlink" title="for 语句"></a>for 语句</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">for</span><span class="token punctuation">(</span>expr1 <span class="token punctuation">;</span> expr2 <span class="token punctuation">;</span> expr3<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里需要做出一点说明：  </p>
+<ol>
+<li><strong>expr1</strong> 表示初始条件</li>
+<li><strong>expr2</strong> 表示需要满足的条件</li>
+<li><strong>expr3</strong> 表示每次执行完一次语句后要做出的改变</li>
+</ol>
+<p>给出一例方便理解：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">50</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上述语句表示：i 的初始值为0；每次执行完语句后 i 自增1，直到 i 大于五十时结束循环</p>
+<p><strong>注</strong>：  </p>
+<ol>
+<li>for结构中每个表达式都可以省略，但分号不可省略</li>
+<li>for结构和while结构可以互相转化，下属while语句与上述for语句等价<pre class="line-numbers language-c" data-language="c"><code class="language-c">expr1<span class="token punctuation">;</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>expr2<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+ expr3<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>特殊语句同样可以跳出for循环，如 <strong>break ; goto ; return</strong> 等</li>
+</ol>
+<h3 id="do-while-语句"><a href="#do-while-语句" class="headerlink" title="do-while 语句"></a>do-while 语句</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">do</span><span class="token punctuation">&#123;</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">while</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>与 while 的区别在于这种语句会先将语句执行一遍再判断</p>
+<h3 id="循环中的常见问题"><a href="#循环中的常见问题" class="headerlink" title="循环中的常见问题"></a>循环中的常见问题</h3><ol>
+<li>循环可以相互嵌套，但一般不超过三层（会极大降低运行效率）</li>
+<li>一般不用浮点数对循环进行控制，原因是浮点数存在误差，容易增减循环次数</li>
+</ol>
+<p>以上</p>
+<p>这篇博文就到这里~</p>
 
                 
             </div>
@@ -434,7 +527,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://mug-chen.github.io/posts/54708.html">http://mug-chen.github.io/posts/54708.html</a>
+                    <a href="http://mug-chen.github.io/posts/16834.html">http://mug-chen.github.io/posts/16834.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -515,9 +608,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/16834.html">
                     <div class="card-image">
@@ -535,9 +629,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-01-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -550,6 +644,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -560,31 +655,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/5828.html">
+                <a href="/posts/54708.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="C语言程序设计-Chap.2">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="浅谈《阿凡达2：水之道》">
                         
-                        <span class="card-title">C语言程序设计-Chap.2</span>
+                        <span class="card-title">浅谈《阿凡达2：水之道》</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C语言第二章：程序设计初步 笔记
+                            对《阿凡达2：水之道》，观影过后的一些体验
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Study-Notes-C-programming/" class="post-category">
-                                    Study Notes - C programming
+                            <a href="/categories/comment/" class="post-category">
+                                    comment
                                 </a>
                             
                             
