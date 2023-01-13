@@ -7,9 +7,9 @@
 }
 
 /* 修改博客标题的字体大小 */
-@media only screen and (max-width: 601px) {
+@media only screen and (max-width: 650px) {
     header .brand-logo .logo-span {
-        font-size: 1.2rem;
+        font-size: 1.0rem;
     }
 }
 
