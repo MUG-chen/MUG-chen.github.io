@@ -245,7 +245,7 @@ mark {
 }
 
 .text-color {
-    color: #0f9d58 !important;
+    color: #0084ff !important;
 }
 
 .white-color {
@@ -1317,7 +1317,7 @@ thead {
 
 .chip-container .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
+    background: linear-gradient(to right, #00bfff 0%, #009dff 100%) !important;
 }
 
 .chip .tag-length {
@@ -1393,7 +1393,7 @@ thead {
     left: 18px;
     height: 100%;
     width: 4px;
-    background: #0f9d58;
+    background: #0084ff;
 }
 
 @media only screen and (min-width: 900px) {
