@@ -2377,7 +2377,7 @@ body.DarkMode .skillbar .skill-bar-percent {
     border-radius: 3em;
 }
 ::-webkit-scrollbar-track {
-    background-color: rgb(0, 13, 255);
+    background-color: rgb(190, 193, 255);
     border-radius: 3em;
 }
 ::-webkit-scrollbar {
