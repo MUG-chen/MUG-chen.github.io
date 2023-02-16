@@ -18,6 +18,37 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> C programming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C语言程序设计-补充</title>
+      <link href="/posts/4308.html"/>
+      <url>/posts/4308.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>本文的目的在于对此前C语言的笔记进行相应的补充，同时整理一下博主遇到的一些有趣的函数。</p></blockquote><h2 id="1-知识点补充-amp-编程疑难解决"><a href="#1-知识点补充-amp-编程疑难解决" class="headerlink" title="1. 知识点补充 &amp; 编程疑难解决"></a>1. 知识点补充 &amp; 编程疑难解决</h2><h3 id="关于scanf"><a href="#关于scanf" class="headerlink" title="关于scanf"></a>关于scanf</h3><ol><li>在没有特殊说明的情况下，scanf遇到空格，回车等特殊字符会停止，因此在输入字符后需要回车时，不用在scanf后特地打出\n这样的转义字符。</li><li>用scanf时，字符与数字最好分开输入，不然很容易报错，具体原理貌似是%c与%d的输入规则不同。</li></ol><h3 id="关于程序运行时间成本的降低"><a href="#关于程序运行时间成本的降低" class="headerlink" title="关于程序运行时间成本的降低"></a>关于程序运行时间成本的降低</h3><p>运行程序时常常会出现运行时间过长，无法以一个理想的时间得出结果的情况。有以下几种解决办法：</p><ol><li>程序中是否出现了&lt;math.h&gt;中的pow函数，因为pow函数的运算方式为浮点运算，速度较慢，如果运算不需要用到浮点数，可以尝试自己写一个更简单的函数进行改进。</li><li>程序中是否有三层以上的循环，一般来说不会遇到这么复杂的循环，可以尝试改变算法。</li><li>程序中是否有各种递归算法，如果有，尝试改写成循环写法。</li></ol><h3 id="关于字符串"><a href="#关于字符串" class="headerlink" title="关于字符串"></a>关于字符串</h3><h4 id="字符串的输入"><a href="#字符串的输入" class="headerlink" title="字符串的输入"></a>字符串的输入</h4><p>字符串的输入有几种方式：</p><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> str<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">gets</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">gets_s</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">fgets</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token constant">stdin</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>一般而言，博主更常用gets_s。</p><p>但需要注意，关于gets的三种输入函数都存在回车问题，即当这几个函数上面有scanf的时候，会出现函数读入回车导致跳过原本预期中字符串输入的过程，对此有两种解决方式：</p><ol><li>在gets（gets_s，fgets）的前面加一个：<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token function">fflush</span><span class="token punctuation">(</span><span class="token constant">stdin</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//用于清空缓冲区内的数据。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>在gets（gets_s，fgets）的前面加一个：<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//用于读入此前的回车进而防止其影响字符串输入。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ol><p>博主用第二种方法更多一些。</p><h4 id="字符串的输出"><a href="#字符串的输出" class="headerlink" title="字符串的输出"></a>字符串的输出</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> str<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//该方式不会补充回车</span><span class="token function">puts</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//该方式会自动补充回车，效果同printf("%s\n", str);</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h4 id="读入不定个数个字符串"><a href="#读入不定个数个字符串" class="headerlink" title="读入不定个数个字符串"></a>读入不定个数个字符串</h4><p>常用gets_s的返回值进行操作。<br>这里进行说明：</p><p>gets_s是有返回值的，具体返回值为输入字符串的地址（相当于返回一个指针）。如果输入不成功则返回一个空指针。</p><p>因此常用这个性质：</p><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">gets_s</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span>i<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token comment">//需要结束输入时则使用CTRL+Z进行结尾。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="关于指针"><a href="#关于指针" class="headerlink" title="关于指针"></a>关于指针</h3><h4 id="指针的地址？-指针所指向的地址？"><a href="#指针的地址？-指针所指向的地址？" class="headerlink" title="指针的地址？ 指针所指向的地址？"></a>指针的地址？ 指针所指向的地址？</h4><p>这是两码事。</p><p>指针的地址可以通过：</p><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%x"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>ip<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>进行查看。</p><p>而指针所指向的地址则可以通过：</p><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%x"</span><span class="token punctuation">,</span> ip<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>进行查看。</p><h2 id="2-一些有趣的函数"><a href="#2-一些有趣的函数" class="headerlink" title="2. 一些有趣的函数"></a>2. 一些有趣的函数</h2><blockquote><p>这个条目仅仅用于记录博主遇到过的觉得有一定利用意义的函数。</p></blockquote><h3 id="随机数生成"><a href="#随机数生成" class="headerlink" title="随机数生成"></a>随机数生成</h3><p>利用&lt;stdlib.h&gt;中的：</p><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>该函数的功能为得到0~ RAND_MAX 之间的整数，不同系统的RAND_MAX不一样，反正够用</p><p>如果要得到一个范围内的数，比如3-10之间的数，可以用如下方法：</p><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdlib.h></span></span><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>  <span class="token keyword">int</span> random<span class="token punctuation">;</span>  random<span class="token operator">=</span><span class="token number">3</span><span class="token operator">+</span><span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">%</span><span class="token number">7</span><span class="token punctuation">;</span>  <span class="token comment">//前面的3为最小值，rand后面取余的数为区间宽度。</span>  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> random<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="求素数"><a href="#求素数" class="headerlink" title="求素数"></a>求素数</h3><p>用空间换时间</p><p>具体算法：</p><ol><li>令n&#x3D;2，如果n是素数，则划掉序列中所有n的倍数。</li><li>令n等于下一个没有划掉的元素，回到步骤2。</li></ol><hr><p>本文会随着博主编程经历的增长持续更新。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study Notes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C programming </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -36,6 +67,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> C programming </tag>
+            
+        </tags>
       
     </entry>
     
@@ -56,6 +93,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> C programming </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -74,6 +117,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> C programming </tag>
+            
+        </tags>
       
     </entry>
     
@@ -94,6 +143,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> C programming </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -108,10 +163,16 @@
       
       <categories>
           
-          <category> comment </category>
+          <category> Review </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> Movies </tag>
+            
+        </tags>
       
     </entry>
     
@@ -132,6 +193,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> C programming </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -150,6 +217,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> C programming </tag>
+            
+        </tags>
       
     </entry>
     
@@ -170,6 +243,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> Blog </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -188,6 +267,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> Blog </tag>
+            
+        </tags>
       
     </entry>
     
