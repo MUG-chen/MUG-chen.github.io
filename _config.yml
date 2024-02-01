@@ -1,0 +1,166 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: MUG-chen's Blog
+subtitle: 'Some miscellaneous'
+description: ''
+keywords:
+author: MUG-chen
+language: zh-CN
+timezone: 'Asia/Shanghai'
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: http://mug-chen.github.io
+permalink: posts/:abbrlink.html
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
+relative_link: false
+future: true
+highlight:
+  enable: false
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: true
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 12
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: hexo-theme-matery
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+
+# 文章链接转静态短地址
+abbrlink: 
+  alg: crc16 #算法选项：crc16丨crc32
+  rep: dec #输出进制：dec为十进制，hex为十六进制
+  drafts: false
+  auto_category:
+     enable: true  
+     depth:        
+  auto_title: false 
+  auto_date: false 
+  force: false
+
+# 懒加载
+lazyload:
+  enable: true  # 是否开启图片懒加载
+  onlypost: false  # 是否只对文章的图片做懒加载
+  loadingImg: # eg ./images/loading.gif
+  isSPA: true # optional. For performance considering, isSPA is added. If your theme is a SPA page, please set it as true
+  preloadRatio: 3 # optional, default is 1
+
+## Hexo-minify Default Config Options
+minify:
+  js:
+    enable: true
+    ## 详细配置: https://github.com/mishoo/UglifyJS
+    options:
+  css:
+    enable: true
+    ## 详细配置: https://github.com/clean-css/clean-css#compatibility-modes
+    options:
+  html:
+    enable: true
+    ## 详细配置: https://github.com/kangax/html-minifier#options-quick-reference
+    options: 
+      minifyJS: true # Compressed JavaScript
+      minifyCSS: true # CSS Compressed
+      removeComments: true # Remove the comments
+      collapseWhitespace: true # Delete any extra space
+      removeAttributeQuotes: true # Delete attribute quotes
+  # + 1.2.0 版本新增
+  postcss:
+    enable: true
+    ## 详细配置: https://github.com/postcss/autoprefixer#options
+    ## 注意Hexo-minify仅内置了autoprefixer插件
+    ## 受Hexo限制，目前无法实现自定义postcss插件
+    options: 
+      # JavaScript 数组写法
+      # overrideBrowserslist: ['> 1%', 'last 2 versions', 'not dead']
+      # YAML 数组写法
+      overrideBrowserslist: 
+        - '> 1%' # 特殊符号需要使用'或"
+        - last 2 versions
+        - not dead
+
+
+deploy: 
+	type: git
+	repository: https://github.com/MUG-chen/MUG-chen.github.io.git
+	branch: main
