@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>test</title>
-      <link href="/posts/63534.html"/>
-      <url>/posts/63534.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="this-is-a-simple-test-for-code-block"><a href="#this-is-a-simple-test-for-code-block" class="headerlink" title="this is a simple test for code block"></a>this is a simple test for code block</h1><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数据结构-Chap-7</title>
       <link href="/posts/55458.html"/>
       <url>/posts/55458.html</url>
