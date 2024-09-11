@@ -1,5 +1,409 @@
-<!DOCTYPE HTML><html lang=zh-CN><head><meta charset=utf-8><meta name=keywords content="HTML&amp;CSS Part4, MUG-chen&#39;s Blog"><meta name=description content="HTML&amp;CSS Part4 笔记"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><meta name=renderer content=webkit|ie-stand|ie-comp><meta name=mobile-web-app-capable content=yes><meta name=format-detection content="telephone=no"><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black-translucent><meta name=referrer content=no-referrer-when-downgrade><title>HTML&amp;CSS Part4 | MUG-chen&#39;s Blog</title><link rel=icon type=image/png href=/favicon.png><style>body{background-image:url(https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Vivid%20theory.webp);background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed}</style><link rel=stylesheet type=text/css href=/libs/awesome/css/all.min.css><link rel=stylesheet type=text/css href=/libs/materialize/materialize.min.css><link rel=stylesheet type=text/css href=/libs/aos/aos.css><link rel=stylesheet type=text/css href=/libs/animate/animate.min.css><link rel=stylesheet type=text/css href=/libs/lightGallery/css/lightgallery.min.css><link rel=stylesheet type=text/css href=/css/matery.css><link rel=stylesheet type=text/css href=/css/my.css><link rel=stylesheet type=text/css href=/css/dark.css media=none onload='"all"!=media&&(media="all")'><link rel=stylesheet href=/libs/tocbot/tocbot.css><link rel=stylesheet href=/css/post.css><script src=/libs/jquery/jquery-3.6.0.min.js></script><link rel=stylesheet type=text/css href=/css/loading.css><meta name=generator content="Hexo 7.1.1"></head><body><header class=navbar-fixed><nav id=headNav class="bg-color nav-transparent"><div id=navContainer class="nav-wrapper container"><div class=brand-logo><a href=/ class="waves-effect waves-light"><img src=/medias/logo.png class=logo-img alt=LOGO> <span class=logo-span>MUG-chen&#39;s Blog</span></a></div><a href=# data-target=mobile-nav class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a><ul class="right nav-menu"><li class="hide-on-med-and-down nav-item"><a href=/ class="waves-effect waves-light"><i class="fas fa-home" style=zoom:.6></i> <span>首页</span></a></li><li class="hide-on-med-and-down nav-item"><a href=/tags class="waves-effect waves-light"><i class="fas fa-tags" style=zoom:.6></i> <span>标签</span></a></li><li class="hide-on-med-and-down nav-item"><a href=/categories class="waves-effect waves-light"><i class="fas fa-bookmark" style=zoom:.6></i> <span>分类</span></a></li><li class="hide-on-med-and-down nav-item"><a href=/archives class="waves-effect waves-light"><i class="fas fa-archive" style=zoom:.6></i> <span>归档</span></a></li><li class="hide-on-med-and-down nav-item"><a href=/about class="waves-effect waves-light"><i class="fas fa-user-circle" style=zoom:.6></i> <span>关于</span></a></li><li><a href=#searchModal class="modal-trigger waves-effect waves-light"><i id=searchIcon class="fas fa-search" title=搜索 style=zoom:.85></i></a></li><li><a href=javascript:; class="waves-effect waves-light" onclick=switchNightMode() title=深色/浅色模式><i id=sum-moon-icon class="fas fa-sun" style=zoom:.85></i></a></li></ul><div id=mobile-nav class="side-nav sidenav"><div class="mobile-head bg-color"><img src=/medias/logo.png class="logo-img circle responsive-img"><div class=logo-name>MUG-chen&#39;s Blog</div><div class=logo-desc>Never really desperate, only the lost of the soul.</div></div><ul class="menu-list mobile-menu-list"><li class=m-nav-item><a href=/ class="waves-effect waves-light"><i class="fa-fw fas fa-home"></i> 首页</a></li><li class=m-nav-item><a href=/tags class="waves-effect waves-light"><i class="fa-fw fas fa-tags"></i> 标签</a></li><li class=m-nav-item><a href=/categories class="waves-effect waves-light"><i class="fa-fw fas fa-bookmark"></i> 分类</a></li><li class=m-nav-item><a href=/archives class="waves-effect waves-light"><i class="fa-fw fas fa-archive"></i> 归档</a></li><li class=m-nav-item><a href=/about class="waves-effect waves-light"><i class="fa-fw fas fa-user-circle"></i> 关于</a></li><li><div class=divider></div></li><li><a href=https://github.com/MUG-chen/MUG-chen.github.io class="waves-effect waves-light" target=_blank><i class="fab fa-github-square fa-fw"></i>Fork Me</a></li></ul></div></div><style>.nav-transparent .github-corner{display:none!important}.github-corner{position:absolute;z-index:10;top:0;right:0;border:0;transform:scale(1.1)}.github-corner svg{color:#0f9d58;fill:#fff;height:64px;width:64px}.github-corner:hover .octo-arm{animation:a .56s ease-in-out}.github-corner .octo-arm{animation:none}@keyframes a{0%,to{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}</style><a href=https://github.com/MUG-chen/MUG-chen.github.io class="github-corner tooltipped hide-on-med-and-down" target=_blank data-tooltip="Fork Me" data-position=left data-delay=50><svg viewBox="0 0 250 250" aria-hidden=true><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill=currentColor style="transform-origin:130px 106px" class=octo-arm></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill=currentColor class=octo-body></path></svg></a></nav></header><div class="bg-cover pd-header post-cover" style=background-image:url(/medias/featureimages/9.jpg)><div class=container style=right:0;left:0><div class=row><div class="col s12 m12 l12"><div class=brand><h1 class="description center-align post-title">HTML&amp;CSS Part4</h1></div></div></div></div></div><main class="post-container content"><div class=row><div id=main-content class="col s12 m12 l9"><div id=artDetail><div class=card><div class="card-content article-info"><div class="row tag-cate"><div class="col s7"><div class=article-tag><a href=/tags/HTML-CSS/ ><span class="chip bg-color">HTML&amp;CSS</span></a></div></div><div class="col s5 right-align"><div class=post-cate><i class="fas fa-bookmark fa-fw icon-category"></i> <a href=/categories/Study-Notes/ class=post-category>Study Notes</a></div></div></div><div class=post-info><div class="post-date info-break-policy"><i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2024-02-25</div><div class="post-date info-break-policy"><i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2024-03-03</div><div class=info-break-policy><i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 3.2k</div></div></div><hr class=clearfix><link rel=stylesheet href=/libs/prism/prism.min.css><div class="card-content article-card-content"><div id=articleContent><h1 id=Part-4-CSS属性详述（2）><a href=#Part-4-CSS属性详述（2） class=headerlink title="Part.4 CSS属性详述（2）"></a>Part.4 CSS属性详述（2）</h1><blockquote><p>在第三部分中，我们了解了文字属性，列表属性以及背景属性，在这一部分，咱们继续将css中的属性说完。</p></blockquote><h2 id=浮动属性><a href=#浮动属性 class=headerlink title=浮动属性></a>浮动属性</h2><p>相信各位应该已经有所疑惑了，HTML中纵向排列貌似是一件非常简单的事情，但我们如果想要让一些元素在标签页上横向排列，就需要涉及到另一种css的内容， <strong>浮动属性</strong> 。</p><p>浮动属性在HTML中主要起两个作用：</p><ul><li>定义网页中的其它元素围绕某一特定元素显示</li><li>让原先纵向排布的元素横向排列</li></ul><blockquote><p>这里希望读者先理解为什么这玩意叫做 <strong>浮动</strong> ，它的意思是你可以让一个元素上浮到浏览器的另一个图层上（笔者其实也不确定图层这个说法准不准确，权且这么叫着吧），而下方的元素会顺次上移到原图层空出的位置，以此达到两个元素在同一个x轴的位置显示的效果。</p></blockquote><p>我们首先介绍一下最基本的浮动属性：</p><h3 id=浮动属性：float><a href=#浮动属性：float class=headerlink title=浮动属性：float></a>浮动属性：float</h3><pre class="line-numbers language-markup" data-language=markup><code class=language-markup>float: left / center / right;
-<span class="token comment">&lt;!-- 分别表示浮动于左侧 / 中间 / 右侧 --></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span></span></code></pre><p>因此，我们如果尝试着利用浮动属性，来让三个div横向显示：</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML&amp;CSS Part4, MUG-chen&#39;s Blog">
+    <meta name="description" content="HTML&amp;CSS Part4 笔记">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>HTML&amp;CSS Part4 | MUG-chen&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <style>
+        body{
+            background-image: url(https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Vivid%20theory.webp);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">MUG-chen&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">MUG-chen&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/MUG-chen/MUG-chen.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/MUG-chen/MUG-chen.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">HTML&amp;CSS Part4</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/HTML-CSS/">
+                                <span class="chip bg-color">HTML&amp;CSS</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Study-Notes/" class="post-category">
+                                Study Notes
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-02-25
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-03-03
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.2k
+                </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Part-4-CSS属性详述（2）"><a href="#Part-4-CSS属性详述（2）" class="headerlink" title="Part.4 CSS属性详述（2）"></a>Part.4 CSS属性详述（2）</h1><blockquote>
+<p>在第三部分中，我们了解了文字属性，列表属性以及背景属性，在这一部分，咱们继续将css中的属性说完。</p>
+</blockquote>
+<h2 id="浮动属性"><a href="#浮动属性" class="headerlink" title="浮动属性"></a>浮动属性</h2><p>相信各位应该已经有所疑惑了，HTML中纵向排列貌似是一件非常简单的事情，但我们如果想要让一些元素在标签页上横向排列，就需要涉及到另一种css的内容， <strong>浮动属性</strong> 。</p>
+<p>浮动属性在HTML中主要起两个作用：</p>
+<ul>
+<li>定义网页中的其它元素围绕某一特定元素显示</li>
+<li>让原先纵向排布的元素横向排列</li>
+</ul>
+<blockquote>
+<p>这里希望读者先理解为什么这玩意叫做 <strong>浮动</strong> ，它的意思是你可以让一个元素上浮到浏览器的另一个图层上（笔者其实也不确定图层这个说法准不准确，权且这么叫着吧），而下方的元素会顺次上移到原图层空出的位置，以此达到两个元素在同一个x轴的位置显示的效果。</p>
+</blockquote>
+<p>我们首先介绍一下最基本的浮动属性：</p>
+<h3 id="浮动属性：float"><a href="#浮动属性：float" class="headerlink" title="浮动属性：float"></a>浮动属性：float</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">float: left / center / right;
+<span class="token comment">&lt;!-- 分别表示浮动于左侧 / 中间 / 右侧 --></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>因此，我们如果尝试着利用浮动属性，来让三个div横向显示：</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -29,7 +433,20 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>green<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blue<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>读者可以将这段代码运行尝试一下，我们会发现，我们成功的使得三个色块从左至右的显示了出来，顺序为红 &#x2F; 绿 &#x2F; 蓝。</p><h3 id=清浮动><a href=#清浮动 class=headerlink title=清浮动></a>清浮动</h3><p>问题来了，我们如果将上面代码中最后一个蓝色的div的浮动属性去掉，读者可以想象一下会产生什么效果？</p><p>答案是蓝色由于补上了红色和绿色空出的原图层的位置，它会被更高图层的红色方块挡住，这显然是有些难以接受的，它影响了我们后续内容的布局，这个问题在HTML中被称为 <strong>高度塌陷</strong> 。我们如果不希望蓝色被遮挡，这里有三种解决方案：</p><ul><li>固定代码</li><li>清浮动</li></ul><p>我们一种一种讲：</p><hr><p>第一种，所谓固定代码，即将横向布局的内容外再套上一层容器，给这个容器固定一个高度和宽度，使得这个容器能够在原图层占据浮动起来的高度，从而达到解决高度塌陷的目的。</p><p>以上面的例子做改动：</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>读者可以将这段代码运行尝试一下，我们会发现，我们成功的使得三个色块从左至右的显示了出来，顺序为红 &#x2F; 绿 &#x2F; 蓝。</p>
+<h3 id="清浮动"><a href="#清浮动" class="headerlink" title="清浮动"></a>清浮动</h3><p>问题来了，我们如果将上面代码中最后一个蓝色的div的浮动属性去掉，读者可以想象一下会产生什么效果？</p>
+<p>答案是蓝色由于补上了红色和绿色空出的原图层的位置，它会被更高图层的红色方块挡住，这显然是有些难以接受的，它影响了我们后续内容的布局，这个问题在HTML中被称为 <strong>高度塌陷</strong> 。我们如果不希望蓝色被遮挡，这里有三种解决方案：</p>
+<ul>
+<li>固定代码</li>
+<li>清浮动</li>
+</ul>
+<p>我们一种一种讲：</p>
+<hr>
+<p>第一种，所谓固定代码，即将横向布局的内容外再套上一层容器，给这个容器固定一个高度和宽度，使得这个容器能够在原图层占据浮动起来的高度，从而达到解决高度塌陷的目的。</p>
+<p>以上面的例子做改动：</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -65,8 +482,16 @@
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blue<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>可以看到，我们对需要横向排列的两个玩意单独框了起来，而后对最外层的容器进行了高度设置。</p><hr><p>第二种，所谓清浮动，是css中提供的一个属性 <strong>clear</strong> ，它可以使得一个元素左侧或右侧没有浮动元素与它重叠，从而达到解决高度塌陷的效果。</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup>clear: none / left / right / both
-<span class="token comment">&lt;!-- 代表允许有浮动对象 / 不允许左侧有浮动对象 / 不允许右侧有浮动对象 / 不允许有浮动对象 --></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span></span></code></pre><p>这个属性要正确使用，需要加给 <strong>原先被遮挡的元素</strong> ，我们还是以上面的例子做修改：</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以看到，我们对需要横向排列的两个玩意单独框了起来，而后对最外层的容器进行了高度设置。</p>
+<hr>
+<p>第二种，所谓清浮动，是css中提供的一个属性 <strong>clear</strong> ，它可以使得一个元素左侧或右侧没有浮动元素与它重叠，从而达到解决高度塌陷的效果。</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">clear: none / left / right / both
+<span class="token comment">&lt;!-- 代表允许有浮动对象 / 不允许左侧有浮动对象 / 不允许右侧有浮动对象 / 不允许有浮动对象 --></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>这个属性要正确使用，需要加给 <strong>原先被遮挡的元素</strong> ，我们还是以上面的例子做修改：</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -100,7 +525,24 @@
     <span class="token comment">&lt;!-- 这里其实也可以在蓝色方块上直接加一个什么都没有的div，单独写一个行内样式： --></span>
     <span class="token comment">&lt;!-- &lt;div style="clear: left;">&lt;/div> --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>可以看到，我们为蓝色的方块加上了clear属性，使得它不再被遮挡了。</p><hr><h2 id=盒子模型><a href=#盒子模型 class=headerlink title=盒子模型></a>盒子模型</h2><blockquote><p>上面说完了浮动属性的一些基础内容，但我们现在如果想让两个div之间产生一些距离，可能还是有些无能为力（当然，读者可以直接加空的div设置宽度，但多少显得有些繁琐），这时，需要引入css中一个充当基石的模型， <strong>盒子模型</strong> 。</p></blockquote><p><strong>盒子模型</strong> ，即把每个内容都看作是一个盒子，这个模型主要包含四部分的内容：</p><ul><li>内容模块：盒子内需要显示些什么</li><li>内间距：内容模块与边框之间的距离</li><li>边框：一个盒子的外壳（有点类似于表格的最外层）</li><li>外间距：盒子与盒子之间的距离</li></ul><p>我们可以很轻易地想到，在HTML网页这个2D平面内，盒子自然是有上下左右四个方向的，因此，内间距 &#x2F; 边框 &#x2F; 外间距都可以进一步细分成四个量。</p><p>关于内容模块，其实没什么可说的，就是咱们要展示给读者的内容，在此略过不表。</p><h3 id=内边距><a href=#内边距 class=headerlink title=内边距></a>内边距</h3><p>在盒子模型中，内边距用属性 <strong>padding</strong> 进行控制，我们举个例子：</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以看到，我们为蓝色的方块加上了clear属性，使得它不再被遮挡了。</p>
+<hr>
+<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><blockquote>
+<p>上面说完了浮动属性的一些基础内容，但我们现在如果想让两个div之间产生一些距离，可能还是有些无能为力（当然，读者可以直接加空的div设置宽度，但多少显得有些繁琐），这时，需要引入css中一个充当基石的模型， <strong>盒子模型</strong> 。</p>
+</blockquote>
+<p><strong>盒子模型</strong> ，即把每个内容都看作是一个盒子，这个模型主要包含四部分的内容：</p>
+<ul>
+<li>内容模块：盒子内需要显示些什么</li>
+<li>内间距：内容模块与边框之间的距离</li>
+<li>边框：一个盒子的外壳（有点类似于表格的最外层）</li>
+<li>外间距：盒子与盒子之间的距离</li>
+</ul>
+<p>我们可以很轻易地想到，在HTML网页这个2D平面内，盒子自然是有上下左右四个方向的，因此，内间距 &#x2F; 边框 &#x2F; 外间距都可以进一步细分成四个量。</p>
+<p>关于内容模块，其实没什么可说的，就是咱们要展示给读者的内容，在此略过不表。</p>
+<h3 id="内边距"><a href="#内边距" class="headerlink" title="内边距"></a>内边距</h3><p>在盒子模型中，内边距用属性 <strong>padding</strong> 进行控制，我们举个例子：</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -121,24 +563,51 @@
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et id, minus unde ad cumque, at animi modi dolorem voluptatibus, delectus voluptates ullam! Facilis autem illo vero distinctio nulla corrupti a!
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>读者可以跑一下试试，我们可以很清晰的看到，文字和边框是有一个很明显的间隔的，这就是内边距。</p><p>这时，我们又更挑剔了，我们希望能够分别设置内边距，即上下左右分别设置，也有方法：</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup>padding: 20px 30px;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>读者可以跑一下试试，我们可以很清晰的看到，文字和边框是有一个很明显的间隔的，这就是内边距。</p>
+<p>这时，我们又更挑剔了，我们希望能够分别设置内边距，即上下左右分别设置，也有方法：</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">padding: 20px 30px;
 <span class="token comment">&lt;!-- 只写两个值，代表上下，左右的两个值 --></span>
 padding: 20px 30px 10px;
 <span class="token comment">&lt;!-- 写三个值，代表上，左右，下的三个值 --></span>
 padding: 10px 20px 30px 40px
-<span class="token comment">&lt;!-- 写四个值，代表上，右，下，左的四个值（其实就是顺时针） --></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>当然，我们如果就想拿一个属性来控制某一个方向的内边距，也有相应的设置：</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup>padding-top: 20px;
+<span class="token comment">&lt;!-- 写四个值，代表上，右，下，左的四个值（其实就是顺时针） --></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当然，我们如果就想拿一个属性来控制某一个方向的内边距，也有相应的设置：</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">padding-top: 20px;
 padding-bottom: 20px;
 padding-left: 20px;
 padding-right: 20px;
-<span class="token comment">&lt;!-- 分别代表上下左右的内边距 --></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>需要提一嘴的时，当设置padding时，会导致盒子本身的大小有相应的增大。因此背景色是可以蔓延到内边距的位置的。</p><p>与此同时，如果我们需要手动设置某些元素的内边距为0 （比如ul中的左内边距），我们也可以通过这种方式达成目的。</p><h3 id=边框><a href=#边框 class=headerlink title=边框></a>边框</h3><p>我们继续外延，在内边距的外侧紧跟着一圈边框，也是可以设置的属性，利用 <strong>border</strong> 进行控制。</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup>border: 5px solid red;
+<span class="token comment">&lt;!-- 分别代表上下左右的内边距 --></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>需要提一嘴的时，当设置padding时，会导致盒子本身的大小有相应的增大。因此背景色是可以蔓延到内边距的位置的。</p>
+<p>与此同时，如果我们需要手动设置某些元素的内边距为0 （比如ul中的左内边距），我们也可以通过这种方式达成目的。</p>
+<h3 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h3><p>我们继续外延，在内边距的外侧紧跟着一圈边框，也是可以设置的属性，利用 <strong>border</strong> 进行控制。</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">border: 5px solid red;
 <span class="token comment">&lt;!-- 第一个属性是边框的宽度 --></span>
 <span class="token comment">&lt;!-- 第二额属性是边框的样式，有实线（solid）、双实线（double）、虚线（dashed）、
 点状线（dotted） --></span>
-<span class="token comment">&lt;!-- 第三个属性是边框的颜色 --></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>与内边距相似的，边框也可以对四个方向分别进行设置：</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup>border-top
+<span class="token comment">&lt;!-- 第三个属性是边框的颜色 --></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>与内边距相似的，边框也可以对四个方向分别进行设置：</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">border-top
 border-bottom
 border-left
 border-right
-<span class="token comment">&lt;!-- 后续跟的值与上述单写border时的形式完全相同 --></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>当然，也有另一种写法，即将 border 拆分成 <strong>border-width border-style border-color</strong> ，而后在每个属性后多写几个值，也能达成分别控制四周的效果，具体逻辑与上文中相同，即：</p><ul><li>两个值：上下，左右</li><li>三个值：上，左右，下</li><li>四个值：上，右，下，左</li></ul><p>额外提一嘴，背景色是同样可以延伸到边框处的</p><h3 id=外边距><a href=#外边距 class=headerlink title=外边距></a>外边距</h3><p>咱们继续外延，紧接着边框的，就是外边距。利用 <strong>margin</strong> 进行控制。</p><p>这里的设置方式与padding几乎一致，同样的紧跟一个宽度；也可以设置1，2，3，4个值，控制的边框也与上方的原则相同；也可以分成 <strong>margin-top margin-bottom margin-left margin-right</strong> 四个属性进行书写。因此在这里不再详细叙述了，读者可参考上面的padding的写法。</p><p>二者明显的不同是背景色无法延伸至外边距处，此外，margin是支持负值的设置的：</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token comment">&lt;!-- 后续跟的值与上述单写border时的形式完全相同 --></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当然，也有另一种写法，即将 border 拆分成 <strong>border-width border-style border-color</strong> ，而后在每个属性后多写几个值，也能达成分别控制四周的效果，具体逻辑与上文中相同，即：</p>
+<ul>
+<li>两个值：上下，左右</li>
+<li>三个值：上，左右，下</li>
+<li>四个值：上，右，下，左</li>
+</ul>
+<p>额外提一嘴，背景色是同样可以延伸到边框处的</p>
+<h3 id="外边距"><a href="#外边距" class="headerlink" title="外边距"></a>外边距</h3><p>咱们继续外延，紧接着边框的，就是外边距。利用 <strong>margin</strong> 进行控制。</p>
+<p>这里的设置方式与padding几乎一致，同样的紧跟一个宽度；也可以设置1，2，3，4个值，控制的边框也与上方的原则相同；也可以分成 <strong>margin-top margin-bottom margin-left margin-right</strong> 四个属性进行书写。因此在这里不再详细叙述了，读者可参考上面的padding的写法。</p>
+<p>二者明显的不同是背景色无法延伸至外边距处，此外，margin是支持负值的设置的：</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -174,8 +643,22 @@ border-right
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>如上，我们将第二个盒子的上侧外边距设置成了-50px，运行过后可以发现两个盒子纵向重叠到一块了。</p><p>除此之外，我们还有一种很常用的横向居中方案：</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup>margin:0 auto;
-<span class="token comment">&lt;!-- 上下外间距为0，左右外间距自动（即居中） --></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span></span></code></pre><p>好了，我们已经大体搞明白了外边距这个玩意的作用，现在我们需要明确两个很容易碰到的问题：</p><ul><li>兄弟关系的盒子的垂直 &#x2F; 水平外边距问题</li><li>父子关系的盒子的外边距问题</li></ul><p>咱一个个说：</p><hr><p>所谓兄弟关系，就是这俩玩意在html中的地位是相同的，而俩盒子又在水平或竖直方向上相邻。</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如上，我们将第二个盒子的上侧外边距设置成了-50px，运行过后可以发现两个盒子纵向重叠到一块了。</p>
+<p>除此之外，我们还有一种很常用的横向居中方案：</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">margin:0 auto;
+<span class="token comment">&lt;!-- 上下外间距为0，左右外间距自动（即居中） --></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>好了，我们已经大体搞明白了外边距这个玩意的作用，现在我们需要明确两个很容易碰到的问题：</p>
+<ul>
+<li>兄弟关系的盒子的垂直 &#x2F; 水平外边距问题</li>
+<li>父子关系的盒子的外边距问题</li>
+</ul>
+<p>咱一个个说：</p>
+<hr>
+<p>所谓兄弟关系，就是这俩玩意在html中的地位是相同的，而俩盒子又在水平或竖直方向上相邻。</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -200,7 +683,12 @@ border-right
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>以上面的这两个盒子为例，我们原本的想象是，第一个盒子下外边距为100px，第二个盒子上外边距为50px，俩盒子应该距离150px才对，但我们发现最终俩盒子只隔了100px。</p><p>这个位置就需要额外记忆一下： <strong>竖直方向外边距取最大值</strong></p><p>但这个结论对于水平方向并不成立：</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以上面的这两个盒子为例，我们原本的想象是，第一个盒子下外边距为100px，第二个盒子上外边距为50px，俩盒子应该距离150px才对，但我们发现最终俩盒子只隔了100px。</p>
+<p>这个位置就需要额外记忆一下： <strong>竖直方向外边距取最大值</strong></p>
+<p>但这个结论对于水平方向并不成立：</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -227,7 +715,12 @@ border-right
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>我们改成这个水平相邻的状况，会发现它们俩之间确实隔了150px，这证明了另一个结论： <strong>水平方向外边距会合并</strong> 。</p><hr><p>接下来我们谈父子关系的盒子，即外面一个大盒子包着里面一个小盒子。</p><pre class="line-numbers language-markup" data-language=markup><code class=language-markup><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我们改成这个水平相邻的状况，会发现它们俩之间确实隔了150px，这证明了另一个结论： <strong>水平方向外边距会合并</strong> 。</p>
+<hr>
+<p>接下来我们谈父子关系的盒子，即外面一个大盒子包着里面一个小盒子。</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -252,7 +745,691 @@ border-right
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden=true class=line-numbers-rows><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这边，我们将一个小盒子包在一个大盒子里面，为小盒子设置一个上边距，我们本来想着应该可以达到小盒子与大盒子的边框之间相隔一个距离，但很遗憾，最终显示结果是大盒子距离上边界隔了一段距离，而小盒子仍然显示在大盒子的左上角。</p><p>要解决这个问题，有三种方法：</p><ul><li>变通方法，给父盒子加一个内边距（padding），缺点在于padding本身会扩大盒子的大小。</li><li>给父盒子设置边框，缺点同上，仍然会扩大盒子的大小。（可以把颜色设置为transparent，即透明的）</li><li>给子盒子 &#x2F; 父盒子添加浮动属性，使二者不在同一个图层上。</li><li>在父盒子的属性中加入overflow: hidden; 这个方法涉及到BFC相关的内容，在将来的博文中会进一步讲解。</li></ul><hr><p>好了，本篇博文主要针对浮动与盒子模型进行了对应的讲解。</p><p>这篇博文就到这里~</p></div><hr><div class=reprint id=reprint-statement><div class=reprint__author><span class=reprint-meta style=font-weight:700><i class="fas fa-user">文章作者: </i></span><span class=reprint-info><a href=/about rel="external nofollow noreferrer">MUG-chen</a></span></div><div class=reprint__type><span class=reprint-meta style=font-weight:700><i class="fas fa-link">文章链接: </i></span><span class=reprint-info><a href=http://mug-chen.github.io/posts/51901.html>http://mug-chen.github.io/posts/51901.html</a></span></div><div class=reprint__notice><span class=reprint-meta style=font-weight:700><i class="fas fa-copyright">版权声明: </i></span><span class=reprint-info>本博客所有文章除特別声明外，均采用 <a href=https://creativecommons.org/licenses/by/4.0/deed.zh rel="external nofollow noreferrer" target=_blank>CC BY 4.0</a> 许可协议。转载请注明来源 <a href=/about target=_blank>MUG-chen</a> !</span></div></div><script async defer=defer>function navToReprintStatement(){$("html, body").animate({scrollTop:$("#reprint-statement").offset().top-80},800)}document.addEventListener("copy",function(t){M.toast({html:'<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>'})})</script><div class=tag_share style=display:block><div class=post-meta__tag-list style=display:inline-block><div class=article-tag><a href=/tags/HTML-CSS/ ><span class="chip bg-color">HTML&amp;CSS</span></a></div></div><div class=post_share style="zoom:80%;width:fit-content;display:inline-block;float:right;margin:-.15rem 0"><link rel=stylesheet type=text/css href=/libs/share/css/share.min.css><div id=article-share><div class=social-share data-sites=twitter,facebook,google,qq,qzone,wechat data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div><script src=/libs/share/js/social-share.min.js></script></div></div></div></div></div><article id=prenext-posts class="prev-next articles"><div class="row article-row"><div class="article col s12 m6" data-aos=fade-up><div class="article-badge left-badge text-color"><i class="fas fa-chevron-left"></i>&nbsp;上一篇</div><div class=card><a href=/posts/6013.html><div class=card-image><img src=/medias/featureimages/10.jpg class=responsive-img alt="HTML&amp;CSS Part5"> <span class=card-title>HTML&amp;CSS Part5</span></div></a><div class="card-content article-content"><div class="summary block-with-text">HTML&CSS Part5 笔记</div><div class=publish-info><span class=publish-date><i class="far fa-clock fa-fw icon-date"></i>2024-02-29 </span><span class=publish-author><i class="fas fa-bookmark fa-fw icon-category"></i> <a href=/categories/Study-Notes/ class=post-category>Study Notes</a></span></div></div><div class="card-action article-tags"><a href=/tags/HTML-CSS/ ><span class="chip bg-color">HTML&amp;CSS</span></a></div></div></div><div class="article col s12 m6" data-aos=fade-up><div class="article-badge right-badge text-color">下一篇&nbsp;<i class="fas fa-chevron-right"></i></div><div class=card><a href=/posts/2300.html><div class=card-image><img src=/medias/featureimages/8.jpg class=responsive-img alt="HTML&amp;CSS Part3"> <span class=card-title>HTML&amp;CSS Part3</span></div></a><div class="card-content article-content"><div class="summary block-with-text">HTML&CSS Part3 笔记</div><div class=publish-info><span class=publish-date><i class="far fa-clock fa-fw icon-date"></i>2024-02-19 </span><span class=publish-author><i class="fas fa-bookmark fa-fw icon-category"></i> <a href=/categories/Study-Notes/ class=post-category>Study Notes</a></span></div></div><div class="card-action article-tags"><a href=/tags/HTML-CSS/ ><span class="chip bg-color">HTML&amp;CSS</span></a></div></div></div></div></article></div><script type=text/javascript src=/libs/codeBlock/codeBlockFuction.js></script><script type=text/javascript src=/libs/prism/prism.min.js></script><script type=text/javascript src=/libs/codeBlock/codeLang.js></script><script type=text/javascript src=/libs/codeBlock/codeCopy.js></script><script type=text/javascript src=/libs/codeBlock/codeShrink.js></script></div><div id=toc-aside class="expanded col l3 hide-on-med-and-down"><div class="toc-widget card" style=background-color:#fff><div class=toc-title><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div><div id=toc-content></div></div></div></div><div id=floating-toc-btn class=hide-on-med-and-down><a class="btn-floating btn-large bg-color"><i class="fas fa-list-ul"></i></a></div><script src=/libs/tocbot/tocbot.min.js></script><script>$(function(){tocbot.init({tocSelector:"#toc-content",contentSelector:"#articleContent",headingsOffset:-(.4*$(window).height()-45),collapseDepth:Number("0"),headingSelector:"h2, h3, h4"});let t=parseInt(.4*$(window).height()-64),e=$(".toc-widget");$(window).scroll(function(){$(window).scrollTop()>t?e.addClass("toc-fixed"):e.removeClass("toc-fixed")});const n="expanded";let i=$("#toc-aside"),l=$("#main-content");$("#floating-toc-btn .btn-floating").click(function(){i.hasClass(n)?(i.removeClass(n).hide(),l.removeClass("l9")):(i.addClass(n).show(),l.addClass("l9"));var e="artDetail",o="prenext-posts";if(0!==(e=$("#"+e)).length){let t=e.width();450<=t?t+=21:350<=t&&t<450?t+=18:300<=t&&t<350?t+=16:t+=14,$("#"+o).width(t)}})})</script></main><footer class="page-footer bg-color"><div class="container row center-align" style=margin-bottom:15px!important><div class="col s12 m8 l8 copy-right">Copyright&nbsp;&copy; <span id=year>2022-2024</span> <a href=/about target=_blank>MUG-chen</a> |&nbsp;Powered by&nbsp;<a href=https://hexo.io/ target=_blank>Hexo</a> |&nbsp;Theme&nbsp;<a href=https://github.com/blinkfox/hexo-theme-matery target=_blank>Matery</a><br><span id=busuanzi_container_site_pv>&nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp; <span id=busuanzi_value_site_pv class=white-color></span> </span><span id=busuanzi_container_site_uv>&nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp; <span id=busuanzi_value_site_uv class=white-color></span></span><br><span id=sitetime>Loading ...</span><script>var calcSiteTime=function(){var e=new Date,t="2022",n=e.getFullYear(),i=e.getMonth()+1,a=e.getDate(),r=e.getHours(),o=e.getMinutes(),e=e.getSeconds(),s=Date.UTC(t,"12","25","22","45","0"),i=Date.UTC(n,i,a,r,o,e)-s,a=Math.floor(i/31536e6),r=Math.floor(i/864e5-365*a);t===String(n)?(document.getElementById("year").innerHTML=n,o="This site has been running for "+r+" days",o="本站已运行 "+r+" 天",document.getElementById("sitetime").innerHTML=o):(document.getElementById("year").innerHTML=t+" - "+n,e="This site has been running for "+a+" years and "+r+" days",e="本站已运行 "+a+" 年 "+r+" 天",document.getElementById("sitetime").innerHTML=e)};calcSiteTime()</script><br></div><div class="col s12 m4 l4 social-link social-statis"><a href=https://github.com/MUG-chen class=tooltipped target=_blank data-tooltip=访问我的GitHub data-position=top data-delay=50><i class="fab fa-github"></i></a></div></div></footer><div class=progress-bar></div><div id=searchModal class=modal><div class=modal-content><div class=search-header><span class=title><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span> <input type=search id=searchInput name=s placeholder=请输入搜索的关键字 class=search-input></div><div id=searchResult></div></div></div><script type=text/javascript>$(function(){!function(t,r,s){"use strict";$.ajax({url:t,dataType:"xml",success:function(t){var e=$("entry",t).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get(),t=document.getElementById(r),n=document.getElementById(s);t.addEventListener("input",function(){var o='<ul class="search-result-list">',h=this.value.trim().toLowerCase().split(/[\s\-]+/);n.innerHTML="",this.value.trim().length<=0||(e.forEach(function(t){var n,e,r,s=!0,i=t.title.trim().toLowerCase(),l=t.content.trim().replace(/<[^>]+>/g,"").toLowerCase(),a=0===(a=t.url).indexOf("/")?t.url:"/"+a,c=-1,u=-1;""!==i&&""!==l&&h.forEach(function(t,e){n=i.indexOf(t),c=l.indexOf(t),n<0&&c<0?s=!1:(c<0&&(c=0),0===e&&(u=c))}),s&&(o+="<li><a href='"+a+"' class='search-result-title'>"+i+"</a>",a=t.content.trim().replace(/<[^>]+>/g,""),0<=u&&(t=u+80,(t=0===(e=(e=u-20)<0?0:e)?100:t)>a.length&&(t=a.length),r=a.substr(e,t),h.forEach(function(t){var e=new RegExp(t,"gi");r=r.replace(e,'<em class="search-keyword">'+t+"</em>")}),o+='<p class="search-result">'+r+"...</p>"),o+="</li>")}),o+="</ul>",n.innerHTML=o)})}})}("/search.xml","searchInput","searchResult")})</script><div class=stars-con><div id=stars></div><div id=stars2></div><div id=stars3></div></div><script>function switchNightMode(){$('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($("body")),setTimeout(function(){$("body").hasClass("DarkMode")?($("body").removeClass("DarkMode"),localStorage.setItem("isDark","0"),$("#sum-moon-icon").removeClass("fa-sun").addClass("fa-moon")):($("body").addClass("DarkMode"),localStorage.setItem("isDark","1"),$("#sum-moon-icon").addClass("fa-sun").removeClass("fa-moon")),setTimeout(function(){$(".Cuteen_DarkSky").fadeOut(1e3,function(){$(this).remove()})},2e3)})}</script><div id=backTop class=top-scroll><a class="btn-floating btn-large waves-effect waves-light" href=#!><i class="fas fa-arrow-up"></i></a></div><script src=/libs/materialize/materialize.min.js></script><script src=/libs/masonry/masonry.pkgd.min.js></script><script src=/libs/aos/aos.js></script><script src=/libs/scrollprogress/scrollProgress.min.js></script><script src=/libs/lightGallery/js/lightgallery-all.min.js></script><script src=/js/matery.js></script><script type=text/javascript>var windowWidth=$(window).width();768<windowWidth&&document.write('<script type="text/javascript" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/libs/others/snow.js"><\/script>')</script><script src=https://ssl.captcha.qq.com/TCaptcha.js></script><script src=/libs/others/TencentCaptcha.js></script><button id=TencentCaptcha data-appid=xxxxxxxxxx data-cbfn=callback type=button hidden></button><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0],e=(t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js",document.getElementsByTagName("script")[0]);e.parentNode.insertBefore(t,e)}()</script><script async src=/libs/others/busuanzi.pure.mini.js></script><script src=/libs/instantpage/instantpage.js type=module></script><div id=loading-box><div class=loading-left-bg></div><div class=loading-right-bg></div><div class=spinner-box><div class=configure-border-1><div class=configure-core></div></div><div class=configure-border-2><div class=configure-core></div></div><div class=loading-word>加载中...</div></div></div><script>window.addEventListener("load",function(){document.body.style.overflow="auto",document.getElementById("loading-box").classList.add("loaded")},!1)</script>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这边，我们将一个小盒子包在一个大盒子里面，为小盒子设置一个上边距，我们本来想着应该可以达到小盒子与大盒子的边框之间相隔一个距离，但很遗憾，最终显示结果是大盒子距离上边界隔了一段距离，而小盒子仍然显示在大盒子的左上角。</p>
+<p>要解决这个问题，有三种方法：</p>
+<ul>
+<li>变通方法，给父盒子加一个内边距（padding），缺点在于padding本身会扩大盒子的大小。</li>
+<li>给父盒子设置边框，缺点同上，仍然会扩大盒子的大小。（可以把颜色设置为transparent，即透明的）</li>
+<li>给子盒子 &#x2F; 父盒子添加浮动属性，使二者不在同一个图层上。</li>
+<li>在父盒子的属性中加入overflow: hidden; 这个方法涉及到BFC相关的内容，在将来的博文中会进一步讲解。</li>
+</ul>
+<hr>
+<p>好了，本篇博文主要针对浮动与盒子模型进行了对应的讲解。</p>
+<p>这篇博文就到这里~</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">MUG-chen</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://mug-chen.github.io/posts/51901.html">http://mug-chen.github.io/posts/51901.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">MUG-chen</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/HTML-CSS/">
+                                    <span class="chip bg-color">HTML&amp;CSS</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/6013.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/10.jpg" class="responsive-img" alt="HTML&amp;CSS Part5">
+                        
+                        <span class="card-title">HTML&amp;CSS Part5</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            HTML&CSS Part5 笔记
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-02-29
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Study-Notes/" class="post-category">
+                                    Study Notes
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/HTML-CSS/">
+                        <span class="chip bg-color">HTML&amp;CSS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/2300.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/8.jpg" class="responsive-img" alt="HTML&amp;CSS Part3">
+                        
+                        <span class="card-title">HTML&amp;CSS Part3</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            HTML&CSS Part3 笔记
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Study-Notes/" class="post-category">
+                                    Study Notes
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/HTML-CSS/">
+                        <span class="chip bg-color">HTML&amp;CSS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2024</span>
+            
+            <a href="/about" target="_blank">MUG-chen</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "12";
+                        var startDate = "25";
+                        var startHour = "22";
+                        var startMinute = "45";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/MUG-chen" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+    
+    <div id="loading-box">
+        <div class="loading-left-bg"></div>
+        <div class="loading-right-bg"></div>
+        <div class="spinner-box">
+            <div class="configure-border-1">
+                <div class="configure-core"></div>
+            </div>
+            <div class="configure-border-2">
+                <div class="configure-core"></div>
+            </div>
+            <div class="loading-word">加载中...</div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', function(){
+            document.body.style.overflow = 'auto';
+            document.getElementById('loading-box').classList.add("loaded")
+        }, false)
+    </script>
+    
+
+
         <style>
             [bg-lazy] {
                 background-image: none !important;
@@ -265,4 +1442,6 @@ border-right
                 preloadRatio: 3,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body></html>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+
+</html>
