@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>专业课总复习-计组-Chap.1</title>
+      <link href="/posts/63945.html"/>
+      <url>/posts/63945.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="计算机组成原理-Chap-1-计算机系统概述"><a href="#计算机组成原理-Chap-1-计算机系统概述" class="headerlink" title="计算机组成原理 Chap.1 计算机系统概述"></a>计算机组成原理 Chap.1 计算机系统概述</h1><blockquote><p>本系列计算机组成原理博文基于Bilibili王道计算机教育的免费考研课程整理而来, 目的在于系统的梳理计算机专业课的基础知识, 并为将来的面试做好充分的准备.</p><p>除本系列外, 计算机考研相关还包括数据结构 &#x2F; 操作系统 &#x2F; 计算机网络的相关内容. 会在后续时间内一一进行补足.</p></blockquote><h2 id="引子-为什么要考计组"><a href="#引子-为什么要考计组" class="headerlink" title="引子, 为什么要考计组?"></a>引子, 为什么要考计组?</h2><p>在开始梳理前, 稿主认为有必要明确, <strong>为什么是计组? 计组在整个计算机体系中占据了什么样的地位?</strong></p><p><img src="https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Loading.svg" data-original="https://major-course-1310677143.cos.ap-guangzhou.myqcloud.com/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/Chap.1%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/%E5%BC%95%E5%AD%90.png" alt="计算机体系"></p><p>课程中的这张图非常清晰的表述了关于我们会梳理的几门课程的地位. <strong>计组</strong> , 主打的就是一个基础地位, 它描述了计算机的底层硬件架构, 是计算机最基础, 最底层的原理的阐述.</p><h2 id="1-1-计算机的发展"><a href="#1-1-计算机的发展" class="headerlink" title="1.1 计算机的发展"></a>1.1 计算机的发展</h2><p>我们先明确一个概念, <strong>计算机系统</strong> . </p><p>$$ 计算机系统 &#x3D; 硬件 + 软件 $$</p><p>所谓 <strong>硬件</strong> , 就是我们所说的看得见, 摸得着的玩意, 主机, 外设之类的玩意.<br>所谓 <strong>软件</strong> , 就是我们所说的操作系统, 程序之类的东西, 它进一步被分为:</p><ul><li>系统软件: 操作系统, 数据库管理系统, 标准程序库, 语言处理程序, 服务程序(调试Debug…)等.</li><li>应用软件: 各类对接用户的, 提供更多类型的使用服务的软件.</li></ul><p>而一个 <strong>计算机系统性能的好坏</strong> , 取决于系统软硬件功能的总和.</p><hr><p>显然, 我们计组要探讨的重点不是软件, 我们把话题拉回来, 先谈谈 <strong>硬件的发展</strong>.</p><ul><li><strong>电子管</strong> 时代<ul><li>第一台 <strong>电子数字</strong> 计算机: <strong>ENIAC(1946)</strong> , 使用 <strong>电子管</strong> 作为逻辑元件</li><li>这个时代的计算机普遍 <strong>体积巨大, 耗电量巨大</strong></li></ul></li></ul><blockquote><p><strong><font color=#ff9a00>趣闻</font></strong><br>在这个时代人们普遍使用纸带进行编程, 在纸带上打孔与否来标识0 &#x2F; 1, 但这时如果有只小虫子死在你的纸带上了, 这个纸带可就毁了.</p><p>这也是为啥现在找漏洞都叫 <strong>Debug</strong> 的原因.</p></blockquote><ul><li><p><strong>晶体管</strong> 时代</p><ul><li>以 <strong>晶体管</strong> 作为逻辑元件, 相比于电子管, 体积要小得多</li><li>开始出现 <strong>面向过程的程序设计语言</strong> (FORTRAN), 开始出现 <strong>操作系统</strong></li></ul></li><li><p><strong>中小规模集成电路</strong> 时代</p><ul><li>逻辑元件越来越小, 人们开始将其集中集成在一个基片上</li><li>可靠性高得多</li><li>各种 <strong>高级语言</strong> 开始出现, 出现 <strong>分时操作系统</strong></li></ul></li><li><p><strong>大规模 &#x2F; 超大规模集成电路</strong> 时代</p><ul><li>开始出现 <strong>微处理器(CPU) &#x2F; 微型计算机</strong></li><li>个人计算机(PC)开始萌芽</li></ul></li></ul><blockquote><p><strong><font color = #3490de>概念: 制造工艺</font></strong><br>即每个晶体管在集成电路中所占宽度不超过的值. 常见的13nm, 7nm, 5nm, 3nm等都属于这个范畴.</p></blockquote><blockquote><p><strong><font color = #3490de>概念: 逻辑元件</font></strong><br>指的是计算机用来处理电信号(用于表示0 &#x2F; 1的低电平 &#x2F; 高电平)的最小的基本单元.</p></blockquote><hr><p>我们谈到了 <strong>微处理器(CPU)</strong> , 那么自然, 我们把这玩意但拉出来聊聊.</p><p><strong>Intel(英特尔, <del>牙膏厂</del> )</strong> 是此前时代中最富盛名的CPU供应商. 我们拿它推出的芯片来举例.</p><ul><li>8080<ul><li>机器字长: 8位</li></ul></li><li>8086<ul><li>机器字长: 16位</li></ul></li><li>Pentium(奔腾)<ul><li>机器字长: 64位</li></ul></li></ul><blockquote><p><strong><font color = #3490de>概念: 机器字长</font></strong><br>计算机一次整数运算能够处理的二进制位数. 自从进入奔腾处理器后, 包括后续的酷睿系列, 都保持了机器字长64位的形式.</p></blockquote><blockquote><p><strong><font color=#ff9a00>趣闻</font></strong><br>除了 <strong>Intel</strong> , 还有一家供应商叫 <strong>AMD</strong> , 而这两家企业的创始人来自于同一个公司 <strong>仙童半导体公司</strong> , 集成电路这个概念也是由这家公司捅咕出来的.</p></blockquote><hr><p><strong>摩尔定律</strong></p><p>由Intel公司创始人之一 摩尔( <strong>Gordon Moore</strong> ) 提出的经验之谈, <strong>每隔18个月, 集成电路上可容纳的晶体管数量会增加1倍</strong> .</p><blockquote><p><strong><font color=#fa4659>注意</font></strong><br>值得注意的是, 由于制造工艺的瓶颈, 该定律已经逐步失效. 但我们不应当忽视该定律造成的影响.</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study Notes </category>
+          
+          <category> 计算机专业课总复习篇 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机组成原理 </tag>
+            
+            <tag> Computer Composition Principles </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Operating-System-Chap.8</title>
+      <link href="/posts/38482.html"/>
+      <url>/posts/38482.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="操作系统-Chap-8-死锁"><a href="#操作系统-Chap-8-死锁" class="headerlink" title="操作系统 Chap.8 死锁"></a>操作系统 Chap.8 死锁</h1><p>回忆一下前两篇文章, 我们提及了几种操作系统用于同步的机制:</p><ul><li>互斥锁</li><li>信号量</li><li>条件变量</li></ul><p>并且通过这一系列机制, 能够实现很多在操作系统中非常常用的操作.</p><p>但我们同时留下了一些小尾巴没有解决, 比如本文的 <strong>死锁(Deadlock)</strong> 问题.</p><h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h2><p>啥是死锁呢?</p><p><em>A set of processes is deadlocked when each process in the set is blocked awaiting an event that can only be triggered by another blocked process in the set.</em><br><em>一个进程的集合出现这么一种情况, 它们之中每一个进程都在等待另一个进程的某个事件, 但此时另一个进程也处于阻塞状态, 这就是死锁.</em></p><p>我们在Chap.6中曾经提及了一个很简单的例子, 这里我们附在下方:</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">P0<span class="token operator">:</span> <span class="token comment">//Process 0</span><span class="token function">wait</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">wait</span><span class="token punctuation">(</span>Q<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">signal</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">signal</span><span class="token punctuation">(</span>Q<span class="token punctuation">)</span><span class="token punctuation">;</span>P1<span class="token operator">:</span> <span class="token comment">//Process 1</span><span class="token function">wait</span><span class="token punctuation">(</span>Q<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">wait</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">signal</span><span class="token punctuation">(</span>Q<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">signal</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>显然, 这俩进程哪个都无法往下进行.</p><p>我们给一个死锁出现的形象案例:</p><p><img src="https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Loading.svg" data-original="/./Operation-System-Chap-8/Protential%20Deadlock.png" alt="Protential Deadlock"></p><p><img src="https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Loading.svg" data-original="/./Operation-System-Chap-8/Actual%20Deadlock.png" alt="Actual Deadlock"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study Notes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Operating System </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Operation-System-Chap.7</title>
       <link href="/posts/1050.html"/>
       <url>/posts/1050.html</url>
