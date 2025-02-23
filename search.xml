@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>专业课总复习-计组-Chap.2</title>
+      <link href="/posts/63625.html"/>
+      <url>/posts/63625.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="计算机组成原理-Chap-2-数据的表示和运算"><a href="#计算机组成原理-Chap-2-数据的表示和运算" class="headerlink" title="计算机组成原理 Chap.2 数据的表示和运算"></a>计算机组成原理 Chap.2 数据的表示和运算</h1><blockquote><p>本系列计算机组成原理博文基于Bilibili王道计算机教育的免费考研课程整理而来, 目的在于系统的梳理计算机专业课的基础知识, 并为将来的面试做好充分的准备.</p><p>除本系列外, 计算机考研相关还包括数据结构 &#x2F; 操作系统 &#x2F; 计算机网络的相关内容. 会在后续时间内一一进行补足.</p></blockquote><h2 id="2-1-计算机中的进制以及数的表示"><a href="#2-1-计算机中的进制以及数的表示" class="headerlink" title="2.1 计算机中的进制以及数的表示"></a>2.1 计算机中的进制以及数的表示</h2><p>第一章中我们寻思了计算机的基本组成结构以及一些总体性的玩意, 这一章我们率先进入一个大难点, <strong>运算</strong> .</p><p>聊到运算, 首先要唠唠这个进制的事.</p><h3 id="2-1-1-进位计数制"><a href="#2-1-1-进位计数制" class="headerlink" title="2.1.1 进位计数制"></a>2.1.1 进位计数制</h3><p><strong>进制</strong> , 这是个挺古老的概念, 这玩意最开始要追溯到罗马数字了, 但我们这里不唠太多有的没的, 仅仅给出一些重要的概念和方法.</p><blockquote><p><strong><font color = #3490de>概念: 基数</font></strong><br>每个数码位所用到的不同符号的个数. 十进制的基数就是10, 二进制的基数就是2.</p></blockquote><p>我们在计算机中通常只涉及到四种常用的进制:</p><ul><li><strong>二进制</strong> : $ (1010)_2 &#x2F; 1010B $</li><li><strong>八进制</strong> : $ (534)_8 $</li><li><strong>十进制</strong> : $ (534)_10 &#x2F; 534D $</li><li><strong>十六进制</strong> : $ (a145)_{16} &#x2F; a145H &#x2F; 0xa145 $</li></ul><blockquote><p><strong><font color=#fa4659>注意: 进制的表示方法</font></strong><br>二进制的 <strong>B</strong> 来源于英文 <strong>Binary</strong> ; 十进制的 <strong>D</strong> 来源于英文 <strong>Decimalism</strong> ; 十六进制的 <strong>H</strong> 来源于英文的 <strong>Hexadecimal</strong> .</p></blockquote><p><strong>二进制</strong> 是最适合计算机进行信息存储与处理的的进制, 这主要有3方面的原因:</p><ol><li>仅需要 <strong>两个稳定状态</strong> 的物理器件就能表示全部的信息</li><li><strong>0 &#x2F; 1</strong> 刚好对应计算机中的逻辑 <strong>假 &#x2F; 真</strong> , 方便实现逻辑运算</li><li>算术运算可以很方便的使用逻辑门电路实现</li></ol><hr><p>扯远了, 我们拉回来点. 进制知道了, 那自然要涉及到 <strong>书同文</strong> 这么一个事情, 互相转换要整的明明白白的.</p><p>对于 <strong>二进制 &#x2F; 八进制 &#x2F; 十六进制</strong> 转 <strong>十进制</strong> 这个事情, 我们通常采用 <strong>位权相乘</strong> 的方式, 即 <strong>位上的数值 * 对应位的权重值</strong></p><blockquote><p><strong><font color = #1fab89>例子</font></strong><br>以常见的16进制举例:<br>16进制转10进制: $ 123.12 &#x3D; 1 \ast 16^2 + 2 \ast 16^1 + 3 \ast 16^0 + 1 \ast 16^{-1} + 2 \ast 16^{-2}  $</p></blockquote><hr><p>这之后, 我们要考虑 <strong>二进制 &#x2F; 八进制 &#x2F; 十六进制互相转换</strong> 的问题. 这个玩意的原理挺简单的, 是由它们基数之间的关系得到的: $ 2^3 &#x3D; 8, 2^4 &#x3D; 16 $ , 因此我们很自然的想到应该能实现 <strong>三个2进制数能与一个8进制数互相转换</strong> , <strong>四个2进制数能与一个16进制数互相转换</strong> .</p><blockquote><p><strong><font color=#fa4659>注意: 转换的补零</font></strong><br>由于这种转换方式的起始点是 <strong>小数点</strong> , 因此当某组位数不足时, 需要自动在前 &#x2F; 后补零.</p></blockquote><blockquote><p><strong><font color = #1fab89>例子</font></strong><br>二进制数: 10 011 101 . 101 01<br>八进制数: 235 . 52</p></blockquote><hr><p>最后是 <strong>十进制转二进制 &#x2F; 八进制 &#x2F; 十六进制</strong> 的问题. 这个问题的方法是通过上面的 <strong>位权相乘</strong> 式子得来的. 有想法的读者可以自己举个例子证明一下, 原理很简单.</p><p>十进制的转换要分整数部分和小数部分分别写. 整数部分的处理方法为 <strong>除基取余</strong> , 将每次除完的余数从小数点开始往前写. 小数部分的处理方法为 <strong>乘基取整</strong> , 将每次相乘后的整数位从小数点开始往后写.</p><hr><p>转换整明白了. 我们最后出两个概念: <strong>真值</strong> &#x2F; <strong>机器数</strong> .</p><p>这个问题的根源在于数字这玩意很讨厌, 它有正负, 但是机器上只能通过二进制来表示一个数, 这就意味着必须要单独分一个位来表示这个数是正值还是负值.</p><blockquote><p><strong><font color = #1fab89>例子</font></strong><br>真值: +15<br>机器数: 0 1111 (最前方为符号位, 0表示正)</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study Notes </category>
+          
+          <category> 计算机专业课总复习篇 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机组成原理 </tag>
+            
+            <tag> Computer Composition Principles </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>专业课总复习-计网-Chap.1</title>
       <link href="/posts/27171.html"/>
       <url>/posts/27171.html</url>
