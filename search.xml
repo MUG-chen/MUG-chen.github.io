@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>PhotoShop Chap.1 基础操作</title>
+      <link href="/posts/12491.html"/>
+      <url>/posts/12491.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Chap-1-基础操作"><a href="#Chap-1-基础操作" class="headerlink" title="Chap.1 基础操作"></a>Chap.1 基础操作</h1><blockquote><p>本系列博文的初始来源来自于博主近期购买了相机, 并了解到 <strong>后期</strong> 这一对于摄影而言十分重要的概念.<br>此前对于几个软件的后期学习都是零零散散的, 不成体系, 因此在这里单开一章, 用于专门进行后期内容的梳理, 本部分的章节针对 PhotoShop(为方便, 后文简称PS) 这个软件, 软件版本基于25.7.0 20240415.r.504的PS版本, 操作系统为Windows 11, 如各位读者与笔者有些许界面上的不同, 几乎是版本上的差距所导致.</p><p>课程内容基于良知塾的付费课程整理而来, 权当笔记整理.<br>好的, 我们正式开始.</p></blockquote><h2 id="1-1-打开-存储"><a href="#1-1-打开-存储" class="headerlink" title="1.1 打开 &#x2F; 存储"></a>1.1 打开 &#x2F; 存储</h2><p>我们首先给出PS中我们常用的几种图片格式:</p><ul><li>JPEG: 通常后缀以 <strong>.jpg</strong> 来结尾. 通常在网络中分享图片均采用此格式.</li><li>GIF: 以后缀 <strong>.gif</strong> 结尾. 是一种动画形式的视频, 可以在PS中打开并编辑. 如果需要播放, 可在上侧菜单栏中点击: “窗口 -&gt; 时间轴” 看到对应的图像时间轴窗口.</li><li>PNG: 以后缀 <strong>.png</strong> 结尾. 同样在网络中很常用, 它最重要的特点是 <strong>可以支持透明背景.</strong></li><li>PSD: 以后缀 <strong>.psd</strong> 结尾. 它是PS默认的一种文件格式, 其重要特点为能够 <strong>存储图层信息</strong> , 因此针对未进行完毕, 或是将来可能再度拿出来编辑的图像, 通常建议通过psd格式进行存储.</li></ul><blockquote><p><strong><font color = #ff3131>注意</font></strong><br>psd好归好, 但大量的图层编辑信息的加入也意味着图像文件大小往往显著大于前三种格式, 这也是为啥我们在网络分享过程中常用jpeg来发送的原因.</p></blockquote><p>对于存储方式, 在博主所使用的PS中, 可以通过 “文件 -&gt; 导出” 来将对应的图像转化为需要的JPEG &#x2F; GIF &#x2F; PNG格式. 而 “文件 -&gt; 存储为” 则能够将当前图像转变为PSD进行存储.</p><p>另一种办法是点击 “文件 -&gt; 存储副本” , 它能够给你全部的图像格式选项.</p><p><img src="https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Loading.svg" data-original="https://post-processing-1310677143.cos.ap-guangzhou.myqcloud.com/PS/Chap.1/PS%E7%9A%84%E5%AD%98%E5%82%A8%E9%80%89%E9%A1%B9.png" alt="PS的存储相关选项"></p><h2 id="1-2-视图操控"><a href="#1-2-视图操控" class="headerlink" title="1.2 视图操控"></a>1.2 视图操控</h2><p>所谓视图操控, 实际上就是对于图片进行一个放大或缩小的操作, 并能够查看图片的实际大小.<br>这通常用于需要对于图片进行整体查看或细节查看的情况, 是非常常用的一个操作.</p><blockquote><p><strong><font color =#ffd231>小建议</font></strong><br>可能有些读者跟着第一节做了一下, 然后把底下有个叫时间轴的玩意开开了, 这东西在编辑静态图像的时候其实是完全不需要的, 读者可以再次通过相同的位置 (“窗口 -&gt; 时间轴”) 将其关掉.</p></blockquote><h3 id="1-2-1-工作区设置"><a href="#1-2-1-工作区设置" class="headerlink" title="1.2.1 工作区设置"></a>1.2.1 工作区设置</h3><p>首先是一个关于工作区的设置:<br>PS为不同类型的用户提供了几种不同的初始预设工作区. 包括基本功能(默认选项), 图形Web, 绘画, 摄影等等.<br>读者可以根据自己的需求来自行选择工作区设置.</p><p><img src="https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Loading.svg" data-original="https://post-processing-1310677143.cos.ap-guangzhou.myqcloud.com/PS/Chap.1/%E5%B7%A5%E4%BD%9C%E5%8C%BA%E8%AE%BE%E7%BD%AE.png" alt="工作区设置"></p><p>所谓工作区就是在界面上为你展示的模块, 不同类型工作区展示模块不同.<br>这些模块是可以自定义的, 比如读者可以尝试着将某一个模块单独拖出来, 关掉它.</p><p>关掉了怎么复原呢, 看到上图中有一个叫 <strong>复位&lt;工作区名称&gt;</strong> 的选项(在上图中就是复位摄影), 点击它, 就能够将工作区展示的模块复原回最初的排布.</p><blockquote><p><strong><font color = #ff3131>注意</font></strong><br>在PS中, 全部的模块都可以在最上方菜单栏 “窗口” 处找到.</p></blockquote><p><strong>由于笔者了解PS由摄影开始, 也只打算对自己拍摄的照片进行编辑, 因此本系列博文后面的说明基本上会基于摄影工作区模式来进行.</strong></p><h3 id="1-2-2-图像的放大-缩小-平移"><a href="#1-2-2-图像的放大-缩小-平移" class="headerlink" title="1.2.2 图像的放大 &#x2F; 缩小 &#x2F; 平移"></a>1.2.2 图像的放大 &#x2F; 缩小 &#x2F; 平移</h3><p>在PS左侧的工具栏中, 有一个 <strong>缩放工具</strong> , 长这样:</p><p><img src="https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Loading.svg" data-original="https://post-processing-1310677143.cos.ap-guangzhou.myqcloud.com/PS/Chap.1/%E7%BC%A9%E6%94%BE%E5%B7%A5%E5%85%B7.png" alt="缩放工具"></p><p>读者选中这个工具, 随后会发现界面上的鼠标变成了个类似放大镜的东西, 此时再次点击屏幕, 就能够发现画面以点击的位置为中心放大了.<br>如果需要缩小, 请按住键盘上的 <strong>Alt</strong> 键, 再次点击屏幕即可.</p><p>如果需要平移视图, 可以通过缩放工具左侧的 <strong>抓手工具</strong> 来进行操作. 它长这样:</p><p><img src="https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Loading.svg" data-original="https://post-processing-1310677143.cos.ap-guangzhou.myqcloud.com/PS/Chap.1/%E6%8A%93%E6%89%8B%E5%B7%A5%E5%85%B7.png" alt="抓手工具"></p><blockquote><p><strong><font color =#ffd231>小建议</font></strong><br>读者会发现每次都要选择这些工具, 实在是有点麻烦, 因此我们给出这些工具 <strong>在摄影工作区</strong> 下的快捷键.<br>按住Alt, 可以通过鼠标滚轮来放大 &#x2F; 缩小图像, 也可以通过 Ctrl + + &#x2F; Ctrl + - 来进行图像的放大缩小..<br>按住空格(Space), 可以通过鼠标单击并移动来平移视图.</p></blockquote><p>还有一种非常快速切换回全图像视图的快捷键, Ctrl + 0.<br>它对应的是PS最上方菜单的: “视图 -&gt; 按屏幕大小缩放” :</p><p><img src="https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Loading.svg" data-original="https://post-processing-1310677143.cos.ap-guangzhou.myqcloud.com/PS/Chap.1/%E6%8C%89%E5%B1%8F%E5%B9%95%E5%A4%A7%E5%B0%8F%E7%BC%A9%E6%94%BE.png" alt="按屏幕大小缩放"></p><p>与之对应的还有一个叫 <strong>100%缩放</strong> 的选项, 它会按照图像 <strong>实际大小(像素数1:1)</strong> 来缩放图片, 快捷键是 Ctrl + 1 .<br>上面的图片里面有对应的选项, 这里就不重新截一张图了.</p><h3 id="1-2-3-导航器"><a href="#1-2-3-导航器" class="headerlink" title="1.2.3 导航器"></a>1.2.3 导航器</h3><p>这玩意是方便我们进行图片的放大 &#x2F; 缩小 &#x2F; 平移所专门设置的一个模块, 可以在菜单栏 “窗口 -&gt; 导航器” 的位置找到:</p><p><img src="https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Loading.svg" data-original="https://post-processing-1310677143.cos.ap-guangzhou.myqcloud.com/PS/Chap.1/%E5%AF%BC%E8%88%AA%E5%99%A8.png" alt="导航器"></p><p>这玩意的能够实时显示当前屏幕上显式的图片位置以及缩放比例.(通过红框)<br>鼠标还可以拖动这个红框来移动它, 很方便.</p><h2 id="1-3-图像大小与分辨率"><a href="#1-3-图像大小与分辨率" class="headerlink" title="1.3 图像大小与分辨率"></a>1.3 图像大小与分辨率</h2><p>PS的图像实际大小可以通过菜单栏中 “图像 -&gt; 图像大小” 来查看. 后面也可以直接更改查看数值的单位.</p><p><img src="https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Loading.svg" data-original="https://post-processing-1310677143.cos.ap-guangzhou.myqcloud.com/PS/Chap.1/%E5%9B%BE%E5%83%8F%E5%A4%A7%E5%B0%8F.png" alt="图像大小"></p><p>这里我们通常习惯通过 <strong>像素</strong> 来查看图像大小.</p><blockquote><p><strong><font color =#315aff>概念</font></strong><br>像素, 即图像的最基本组成单位, 它通常是一个小的方形颜色块.<br>通常而言, 一个图像所包含的像素越多, 图像越精细.</p></blockquote><p>显然, 我们能够通过图像大小的设置来实时改变图像的像素量, 从而将图像转化为我们需要的大小.</p><blockquote><p><strong><font color = #ff3131>注意</font></strong><br>问题是, 这些去掉的像素 &#x2F; 提高的像素怎么来的呢?<br>它是通过图像大小下侧的一个叫做 <strong>重新采样</strong> 的算法来得到的, 里面有一些算法选项, 对于我们来说, 通常保持自动即可.</p><p>我们要明确, 无论是把图片像素量改小 &#x2F; 增大, 实际上都造成图像经过一个算法的涂抹, 进而影响图像清晰度.<br>这也是为什么图像细节不能完全跟像素量划等号的原因.</p></blockquote><p>我们明确了像素是个啥玩意, 那现在来考虑 <strong>分辨率</strong> 就很好办了.  </p><blockquote><p><strong><font color =#315aff>概念</font></strong><br>分辨率, 形容的是单位长度中的像素密度. 通常的单位有 <strong>像素 &#x2F; 英寸</strong> 以及 <strong>像素 &#x2F; 厘米</strong> .</p></blockquote><p>显然, 从绝对的清晰角度来看, 分辨率这玩意越高越好. 但我们也要考虑存储和处理成本, 我们建一个过大的分辨率图像, 图像会很大不说, 编辑它所耗费的电脑资源也会成比例增加.<br>在PS的新建文件菜单( “文件 -&gt; 新建” )中, 给出了各种介质的常见分辨率, 通常按照其给出的默认分辨率进行编辑即可:</p><p><img src="https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Loading.svg" data-original="https://post-processing-1310677143.cos.ap-guangzhou.myqcloud.com/PS/Chap.1/%E6%96%B0%E5%BB%BA%E6%96%87%E6%A1%A3%E7%95%8C%E9%9D%A2.png" alt="新建文档界面"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 摄影 </category>
+          
+          <category> 后期 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PhotoShop </tag>
+            
+            <tag> 后期 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据库系统概论-Chap.7</title>
       <link href="/posts/51412.html"/>
       <url>/posts/51412.html</url>
