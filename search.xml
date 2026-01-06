@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>生成式人工智能导论-杂项</title>
+      <link href="/posts/13302.html"/>
+      <url>/posts/13302.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>本系列生成式人工智能导论博文基于国立台湾大学李宏毅老师发布的课程视频整理而来, 仅用作复习参考.<br>可以算是人工智能领域的入门课程.<br>需要明确的是, 李宏毅老师上传的课程已经是2024年的课程, 距今有两年的时间, 知识难免有过时的可能, 如果出现了这种情况, 博主会尽可能补足当前的状态.</p></blockquote><h1 id="生成式人工智能导论-杂项"><a href="#生成式人工智能导论-杂项" class="headerlink" title="生成式人工智能导论 杂项"></a>生成式人工智能导论 杂项</h1><p>我们在此前的文章梳理中, 事实上已经将大语言模型的运行逻辑, 训练过程等等内容都说完了. 尽管我们并未触及到很深入的细节, 但可喜可贺, 我们已经对全局性的知识框架有了系统的了解.</p><p>本篇博文会针对一些细节性的, 或者杂项进行相对应的梳理总结工作.</p><h2 id="4-1-AI-Agent"><a href="#4-1-AI-Agent" class="headerlink" title="4.1 AI Agent"></a>4.1 AI Agent</h2><p>人们对于大模型的期待, 当然远远不止 <strong>文字接龙</strong> 这么简单.<br>我们回到第一章中提到的, 我们对人工智能的目标定义上: <strong>让机器展现出智能.</strong> 我们希望, AI在面对一个任务时, 能够展现出像人一样的思考方式: 它能够自行做出任务拆分, 自行制定计划, 自行在计划发生改变时进行对应的行为变更.</p><p><img src="https://mug-chensblog-1310677143.cos.ap-beijing.myqcloud.com/Loading.svg" data-original="https://major-course-1310677143.cos.ap-guangzhou.myqcloud.com/%E7%94%9F%E6%88%90%E5%BC%8F%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/%E6%9D%82%E9%A1%B9/AI%20Agent.png" alt="AI Agent"></p><p>从目前的研究中, 主要的重难点包括:</p><ul><li>推理 &#x2F; 规划</li><li>记忆</li><li>工具使用</li></ul><p>其实从2026年初的状况来看, 第一者与第三者都已经比较成熟了, 但就是这个记忆机制, 仍然经常会 “抽风” .</p><p>与此同时, 多智能体(Multi-Agent)也成为了主流, 它衔接了我们在上一章中第二个训练阶段的微调方向, 希望将AI训练成多方面的专才, 并让多个AI来协同工作.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study Notes </category>
+          
+          <category> 人工智能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 人工智能 </tag>
+            
+            <tag> 生成式人工智能导论 </tag>
+            
+            <tag> Introduction to Generative Artificial Intelligence </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>生成式人工智能导论-Chap.3</title>
       <link href="/posts/61280.html"/>
       <url>/posts/61280.html</url>
