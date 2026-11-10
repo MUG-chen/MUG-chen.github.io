@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>Neural Networks-part 3</title>
+      <link href="/posts/39454.html"/>
+      <url>/posts/39454.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="神经网络-Chap-3"><a href="#神经网络-Chap-3" class="headerlink" title="神经网络-Chap.3"></a>神经网络-Chap.3</h1><blockquote><p>本系列神经网络课程根据Youtube上Andrej Karpathy的系列视频: Neural Networks: Zero to Hero整理而来.<br>应当可以作为对于LLM进行内部原理理解的入门视频之一.</p></blockquote><h2 id="3-1-引子"><a href="#3-1-引子" class="headerlink" title="3.1 引子"></a>3.1 引子</h2><p>上一节, 我们完成了一件伟大的事情!<br>我们通过一个数据集, 通过两种方式(计数Counting以及神经网络Neural Network)达成了一个目标, 我们根据上一个字母能够预测出下一个字母了.</p><p>但我们从结果上来看也确实能明白, 只看前面一个字母不太够. 生成的那几串玩意着实不能算作是名字(笑<br>这节, 我们要尝试更进一步, 我们要考虑前面更多的字母.</p><p>我们试着再用Counting的思路来看看这个问题, 我们会发现这个事情一下子变得超级复杂. 我们如果只考虑前一个字母, 我们上一节中的那个表格是27行.<br>如果变成了两个字母, 一下子这个表格变成了 <code>27 * 27</code> 行. 我们会发现这个玩意一下子变成了一个指数爆炸的计数方案.</p><p>所以本节中, 我们得引入一种新的神经网络模型, 叫做 <strong>MLP(Multi-Layer Perceptron)</strong> .</p><blockquote><p>额外提一嘴, 读者在看代码的时候还是要参考作者的GitHub Repo: <a href="https://github.com/karpathy/makemore">https://github.com/karpathy/makemore</a></p></blockquote><h2 id="3-2-Rebuilding-Dataset"><a href="#3-2-Rebuilding-Dataset" class="headerlink" title="3.2 Rebuilding Dataset"></a>3.2 Rebuilding Dataset</h2><p>我们现在需要考虑前面的多个字母. 那么第一步, 很遗憾, 我们之前的组织的数据集格式没法用了. 我们得重新组织数据集.</p><p>先引入原始数据.</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torch<span class="token keyword">import</span> torch<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>functional <span class="token keyword">as</span> Fwords <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'names.txt'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>splitlines<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-expected" data-language="expected"><div class="caption"><span>output</span></div><code class="language-expected"># words[:8][&#39;emma&#39;, &#39;olivia&#39;, &#39;ava&#39;, &#39;isabella&#39;, &#39;sophia&#39;, &#39;charlotte&#39;, &#39;mia&#39;, &#39;amelia&#39;]# len(words)32033<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>建立字母和数字的映射表.</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># build the vucabulary of characters and mapping them to integers</span>chars <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>words<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>stoi <span class="token operator">=</span> <span class="token punctuation">&#123;</span>s<span class="token punctuation">:</span>i<span class="token operator">+</span><span class="token number">1</span> <span class="token keyword">for</span> i<span class="token punctuation">,</span> s <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>chars<span class="token punctuation">)</span><span class="token punctuation">&#125;</span>stoi<span class="token punctuation">[</span><span class="token string">'.'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>itos <span class="token operator">=</span> <span class="token punctuation">&#123;</span>i<span class="token punctuation">:</span>s <span class="token keyword">for</span> s<span class="token punctuation">,</span> i <span class="token keyword">in</span> stoi<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-expected" data-language="expected"><div class="caption"><span>output</span></div><code class="language-expected">&#123;1: &#39;a&#39;, 2: &#39;b&#39;, 3: &#39;c&#39;, 4: &#39;d&#39;, 5: &#39;e&#39;, 6: &#39;f&#39;, 7: &#39;g&#39;, 8: &#39;h&#39;, 9: &#39;i&#39;, 10: &#39;j&#39;, 11: &#39;k&#39;, 12: &#39;l&#39;, 13: &#39;m&#39;, 14: &#39;n&#39;, 15: &#39;o&#39;, 16: &#39;p&#39;, 17: &#39;q&#39;, 18: &#39;r&#39;, 19: &#39;s&#39;, 20: &#39;t&#39;, 21: &#39;u&#39;, 22: &#39;v&#39;, 23: &#39;w&#39;, 24: &#39;x&#39;, 25: &#39;y&#39;, 26: &#39;z&#39;, 0: &#39;.&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>建立数据集.</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># build the dataset</span>block_size <span class="token operator">=</span> <span class="token number">3</span> <span class="token comment"># context length: how many characters we want to consider in the process of our generation?</span>X<span class="token punctuation">,</span> Y <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token keyword">for</span> w <span class="token keyword">in</span> words<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token comment"># take the first 5 words as examples</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>w<span class="token punctuation">)</span>    context <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> block_size    <span class="token keyword">for</span> ch <span class="token keyword">in</span> w <span class="token operator">+</span> <span class="token string">'.'</span><span class="token punctuation">:</span>        ix <span class="token operator">=</span> stoi<span class="token punctuation">[</span>ch<span class="token punctuation">]</span>        X<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ch<span class="token punctuation">)</span>        Y<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ix<span class="token punctuation">)</span>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>itos<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> context<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'--->'</span> itos<span class="token punctuation">[</span>ix<span class="token punctuation">]</span><span class="token punctuation">)</span>        context <span class="token operator">=</span> context<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">[</span>ix<span class="token punctuation">]</span> <span class="token comment"># corp and append</span>X <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span>X<span class="token punctuation">)</span>Y <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span>Y<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-expected" data-language="expected"><div class="caption"><span>output</span></div><code class="language-expected"># outputemma... ---&gt; e..e ---&gt; m.em ---&gt; memm ---&gt; amma ---&gt; .olivia... ---&gt; o..o ---&gt; l.ol ---&gt; ioli ---&gt; vliv ---&gt; iivi ---&gt; avia ---&gt; .ava... ---&gt; a..a ---&gt; v.av ---&gt; aava ---&gt; .isabella... ---&gt; i..i ---&gt; s.is ---&gt; aisa ---&gt; bsab ---&gt; eabe ---&gt; lbel ---&gt; lell ---&gt; alla ---&gt; .sophia... ---&gt; s..s ---&gt; o.so ---&gt; psop ---&gt; hoph ---&gt; iphi ---&gt; ahia ---&gt; .# Xtensor([[ 0,  0,  0],        [ 0,  0,  5],        [ 0,  5, 13],        [ 5, 13, 13],        [13, 13,  1],        [ 0,  0,  0],        [ 0,  0, 15],        ...        [15, 16,  8],        [16,  8,  9],        [ 8,  9,  1]])# Ytensor([ 5, 13, 13,  1,  0, 15, 12,  9, 22,  9,  1,  0,  1, 22,  1,  0,  9, 19,         1,  2,  5, 12, 12,  1,  0, 19, 15, 16,  8,  9,  1,  0])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>读者可以仔细理解一下这段代码, 本质上它在做的是一个<code>滑动窗口(Rolling Window)</code>的工作.<br><del>实在不成问问AI(笑</del></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study Notes </category>
+          
+          <category> 人工智能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 人工智能 </tag>
+            
+            <tag> 神经网络 </tag>
+            
+            <tag> Neural Networks </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Neural Networks-part 2</title>
       <link href="/posts/53866.html"/>
       <url>/posts/53866.html</url>
@@ -84,9 +115,9 @@
       
         <tags>
             
-            <tag> Lightroom </tag>
-            
             <tag> 后期 </tag>
+            
+            <tag> Lightroom </tag>
             
         </tags>
       
@@ -299,9 +330,9 @@
       
         <tags>
             
-            <tag> 后期 </tag>
-            
             <tag> PhotoShop </tag>
+            
+            <tag> 后期 </tag>
             
         </tags>
       
@@ -328,9 +359,9 @@
       
         <tags>
             
-            <tag> 后期 </tag>
-            
             <tag> PhotoShop </tag>
+            
+            <tag> 后期 </tag>
             
         </tags>
       
